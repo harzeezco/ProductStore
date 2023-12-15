@@ -13,9 +13,10 @@ function Hamburger() {
       aria-label='menu'
     >
       <div
-        className={
-          cn('relative z-20 w-full burger', isOpen ? 'burgerActive' : '')
-        }
+        className={cn(
+          'relative z-20 w-full burger',
+          isOpen ? 'burgerActive' : '',
+        )}
       />
     </button>
   );

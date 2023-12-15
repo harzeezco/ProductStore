@@ -4,12 +4,13 @@ import Logo from '../logo';
 import GlobalSearch from '../global-search';
 import Nav from './nav';
 import Hamburger from '../hamburger';
+import SideDrawer from '../side-drawer';
 
 function Header() {
   return (
-    <header className='container-max-w flex items-center justify-between py-6'>
+    <header className='container-max-w fixed left-0 top-0 flex w-full items-center justify-between py-6'>
       <div className='flex items-center gap-10'>
-        <Logo srcForTextLogo='/png/shared/logo-text.png' />
+        <Logo srcForTextLogo='/png/shared/logo-text.png' hasTextLogo={false} />
         <Nav />
       </div>
       <div className='flex items-center gap-10'>
@@ -25,6 +26,7 @@ function Header() {
           <Hamburger />
         </div>
       </div>
+      <SideDrawer />
     </header>
   );
 }

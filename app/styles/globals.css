@@ -29,10 +29,10 @@
     width: 100%;
     transform: scale(1);
   }
-  
+
   .burger::after,
   .burger::before {
-    content: "";
+    content: '';
     background-color: #222;
     display: block;
     height: 2px;
