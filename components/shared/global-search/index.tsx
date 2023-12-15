@@ -5,13 +5,15 @@ import cn from '@/lib/utils';
 
 function GlobalSearch({
   placeholder = '',
-  width,
+  width = '',
+  className = '',
 }: {
   placeholder?: string;
   width: string;
+  className?: string;
 }) {
   return (
-    <div className={cn('relative rounded-sm bg-gray-100', width)}>
+    <div className={cn('relative rounded-sm bg-gray-100', width, className)}>
       <Input
         placeholder={placeholder}
         className='border-none pl-3 outline-none'
@@ -30,6 +32,7 @@ function GlobalSearch({
 
 GlobalSearch.defaultProps = {
   placeholder: 'What are you looking for?',
+  className: '',
 };
 
 export default GlobalSearch;

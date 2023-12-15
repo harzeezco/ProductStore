@@ -1,2 +1,63 @@
 @tailwind utilities;
 @import url('../styles/theme.css');
+
+:root {
+  --primary: #ff7b29;
+}
+
+@layer utilities {
+  .container-max-w {
+    @apply max-w-[1185px] mx-auto max-lg:px-6;
+  }
+
+  .underline-link::before {
+    content: '';
+    height: 3px;
+    width: 0;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    background-color: var(--primary);
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: left;
+    transition: all 0.3s linear;
+  }
+
+  .underline-link:hover::before {
+    opacity: 1;
+    width: 100%;
+    transform: scale(1);
+  }
+  
+  .burger::after,
+  .burger::before {
+    content: "";
+    background-color: #222;
+    display: block;
+    height: 2px;
+    width: 50%;
+    margin: auto;
+    position: relative;
+    transition: transform 0.3s;
+    z-index: 100;
+  }
+
+  .burger::after {
+    top: -5px;
+  }
+
+  .burger::before {
+    top: 5px;
+  }
+
+  .burgerActive::after {
+    transform: rotate(45deg);
+    top: -1px;
+  }
+
+  .burgerActive::before {
+    transform: rotate(-45deg);
+    top: 0px;
+  }
+}

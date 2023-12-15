@@ -4,7 +4,7 @@ import NavLink from '../link';
 
 function Nav() {
   return (
-    <nav>
+    <nav className='max-lg:hidden'>
       <ul className='flex items-center gap-9'>
         {HeaderNavLinks.map((navlink) => (
           <NavLink key={navlink.href} {...navlink} />

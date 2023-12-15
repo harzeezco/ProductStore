@@ -3,7 +3,7 @@ import React from 'react';
 
 function NavLink({ href, label }: { href: string; label?: string }) {
   return (
-    <li>
+    <li className='underline-link relative transition-all hover:text-primary'>
       <Link href={href}>{label}</Link>
     </li>
   );
