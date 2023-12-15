@@ -27,7 +27,7 @@ function Logo({
 }
 
 Logo.defaultProps = {
-  srcForSymbolLogo: '/png/shared/logo-symbol.png',
+  srcForSymbolLogo: '/png/shared-assets/logo-symbol.png',
   hasTextLogo: true,
 };
 

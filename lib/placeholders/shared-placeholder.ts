@@ -17,4 +17,4 @@ export const HeaderNavLinks: { label: string; href: string }[] = [
   },
 ];
 
-export const Data = [];
+export const Home = [];

@@ -8,16 +8,16 @@ import SideDrawer from '../side-drawer';
 
 function Header() {
   return (
-    <header className='container-max-w fixed left-0 top-0 flex w-full items-center justify-between py-6'>
+    <header className='container-max-w flex items-center justify-between py-6'>
       <div className='flex items-center gap-10'>
-        <Logo srcForTextLogo='/png/shared/logo-text.png' hasTextLogo={false} />
+        <Logo
+          srcForTextLogo='/png/shared-assets/logo-text.png'
+          hasTextLogo={false}
+        />
         <Nav />
       </div>
       <div className='flex items-center gap-10'>
-        <GlobalSearch
-          width='w-[300px]'
-          className='max-md:hidden'
-        />
+        <GlobalSearch width='w-[300px]' className='max-md:hidden' />
         <div className='flex items-center gap-5'>
           <Image
             src='/svg/favorite-icon.svg'

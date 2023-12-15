@@ -1,5 +1,5 @@
 import React from 'react';
-import { HeaderNavLinks } from '@/lib/lib';
+import { HeaderNavLinks } from '@/lib/placeholders/shared-placeholder';
 import NavLink from '../link';
 
 function Nav() {
