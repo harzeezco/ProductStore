@@ -14,7 +14,10 @@ function Header() {
         <Nav />
       </div>
       <div className='flex items-center gap-10'>
-        <GlobalSearch width='w-[300px]' className='max-md:hidden' />
+        <GlobalSearch
+          width='w-[300px]'
+          className='max-md:hidden'
+        />
         <div className='flex items-center gap-5'>
           <Image
             src='/svg/favorite-icon.svg'

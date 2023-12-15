@@ -16,7 +16,7 @@ function GlobalSearch({
     <div className={cn('relative rounded-sm bg-gray-100', width, className)}>
       <Input
         placeholder={placeholder}
-        className='border-none pl-3 outline-none'
+        className='border-none pl-3 outline-none placeholder:text-gray-300'
       />
       <button type='button' className='absolute right-2 top-2'>
         <Image

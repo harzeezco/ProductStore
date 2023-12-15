@@ -23,6 +23,7 @@ module.exports = {
         gray: {
           100: '#F5F5F5',
           200: '#c0c0c0',
+          300: '#7F7F7F',
         },
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
