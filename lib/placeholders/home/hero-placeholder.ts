@@ -1,19 +1,42 @@
-export const homeProducts: { name: string; imgSrc: string }[] = [
+export const homeProducts: { name: string; img: string }[] = [
   {
     name: 'iPhone',
-    imgSrc: 'iphone.png',
+    img: 'iphone.png',
   },
   {
     name: 'MacBook',
-    imgSrc: 'macbook.png',
+    img: 'macbook.png',
   },
   {
     name: 'Watch',
-    imgSrc: 'watch.png',
+    img: 'watch.png',
   },
   {
     name: 'iMac',
-    imgSrc: 'imac.png',
+    img: 'imac.png',
+  },
+];
+
+export const SideLinks: { label: string; icon: string }[] = [
+  {
+    label: 'Home',
+    icon: 'home.svg',
+  },
+  {
+    label: 'iPhone',
+    icon: 'mobile.svg',
+  },
+  {
+    label: 'MacBook',
+    icon: 'laptop.svg',
+  },
+  {
+    label: 'Watch',
+    icon: 'watch.svg',
+  },
+  {
+    label: 'iMac',
+    icon: 'iMac.svg',
   },
 ];
 
