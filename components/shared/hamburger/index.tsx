@@ -10,7 +10,8 @@ function Hamburger() {
       type='button'
       className='relative h-16 w-16 cursor-pointer lg:hidden'
       onClick={() => setIsOpen(!isOpen)}
-      aria-label='menu'
+      aria-label='Toggle Menu'
+      data-menu-toggle-btn
     >
       <div
         className={cn(
