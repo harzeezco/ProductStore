@@ -1,25 +1,16 @@
 import React from 'react';
-import { homeProducts } from '@/lib/placeholders/home/hero-placeholder';
-import Image from 'next/image';
+import HomeProducts from './home';
 
-function Main() {
+function Main({
+  active,
+  setActive,
+}: {
+  active: string;
+  setActive: (active: string) => void;
+}) {
   return (
     <main className=''>
-      <div className='grid grid-cols-[50%_50%] grid-rows-2 gap-3 overflow-hidden bg-gray-150'>
-        {homeProducts.map((product) => (
-          <div className='grid place-items-center bg-white py-4'>
-            <Image
-              src={`/png/home-assets/hero-assets/${product.img}`}
-              alt={product.name}
-              width={240}
-              height={240}
-            />
-            <p className='text-gradient mt-4 font-poppins text-xl font-medium'>
-              {product.name}
-            </p>
-          </div>
-        ))}
-      </div>
+      <HomeProducts />
     </main>
   );
 }
