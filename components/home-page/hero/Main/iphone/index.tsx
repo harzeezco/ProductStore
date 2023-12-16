@@ -1,7 +1,7 @@
 import React from 'react';
 
-function iPhoneProducts() {
+function IPhoneProducts() {
   return <div>iPhoneProducts</div>;
 }
 
-export default iPhoneProducts;
+export default IPhoneProducts;

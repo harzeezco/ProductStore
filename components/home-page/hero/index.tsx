@@ -14,7 +14,7 @@ function Hero() {
         style={{ border: '0.1rem solid #c0c0c0', transition: 'all 0.1s' }}
       >
         <Sidebar active={active} setActive={setActive} />
-        <Main active={active} setActive={setActive} />
+        <Main active={active} />
       </div>
     </section>
   );

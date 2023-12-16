@@ -1,7 +1,7 @@
 import React from 'react';
 
-function iMacProducts() {
+function IMacProducts() {
   return <div>iMacProducts</div>;
 }
 
-export default iMacProducts;
+export default IMacProducts;
