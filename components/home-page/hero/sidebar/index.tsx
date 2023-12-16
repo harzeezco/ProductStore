@@ -1,37 +1,14 @@
-import { SideLinks } from '@/lib/placeholders/home/hero-placeholder';
-import Image from 'next/image';
 import React from 'react';
+import { SideLinks } from '@/lib/placeholders/home/hero-placeholder';
+import Bars from './bars';
 
 function Sidebar() {
   return (
-    <aside className='bg-gray-100'>
-      <h1 className='pt-6 text-center text-2xl text-primary'>Apple Products</h1>
-
+    <aside className='grid place-items-center bg-gray-100'>
       <nav className='mt-10'>
         <ul className='grid h-full'>
-          {SideLinks.map((links) => (
-            <li
-              key={links.label}
-              className='flex w-full cursor-pointer items-center justify-between gap-4 px-6 py-4 hover:bg-slate-50'
-              style={{ marginBlock: '.3rem' }}
-            >
-              <Image
-                src={`/svg/${links.icon}`}
-                alt={links.label}
-                width={24}
-                height={24}
-              />
-              <p className='grow justify-self-start text-gray-500'>
-                {links.label}
-              </p>
-              <Image
-                src='/svg/folder.svg'
-                alt='folder'
-                width={24}
-                height={24}
-                className='ml-8'
-              />
-            </li>
+          {SideLinks.map((bars) => (
+            <Bars key={bars.label} {...bars} />
           ))}
         </ul>
       </nav>
