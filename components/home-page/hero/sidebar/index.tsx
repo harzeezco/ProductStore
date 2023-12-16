@@ -4,9 +4,7 @@ import React from 'react';
 
 function Sidebar() {
   return (
-    <aside className='bg-gray-100'>
-      <h1 className='pt-6 text-center text-2xl text-primary'>Apple Products</h1>
-
+    <aside className='sticky inset-y-0 left-0 h-[79.5vh] bg-gray-100'>
       <nav className='mt-10'>
         <ul className='grid h-full'>
           {SideLinks.map((links) => (

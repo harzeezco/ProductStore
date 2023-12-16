@@ -1,15 +1,15 @@
 export const homeProducts: { name: string; img: string }[] = [
   {
     name: 'iPhone',
-    img: 'iphone.png',
+    img: 'iphone.jpg',
   },
   {
     name: 'MacBook',
-    img: 'macbook.png',
+    img: 'macbook.jpg',
   },
   {
     name: 'Watch',
-    img: 'watch.png',
+    img: 'watch.jpg',
   },
   {
     name: 'iMac',
@@ -40,4 +40,23 @@ export const SideLinks: { label: string; icon: string }[] = [
   },
 ];
 
-export const iPhoneProducts = [{}];
+export const iPhoneProducts = [
+  {
+    name: 'iPhone 14 pro',
+    img: 'iphone-14-pro.png',
+    description: 'The ultimate iPhone.',
+    price: 1200,
+  },
+  {
+    name: 'iPhone 14',
+    img: 'iphone-14.png',
+    description: 'A total powerhouse.',
+    price: 999,
+  },
+  {
+    name: 'iPhone 13',
+    img: 'iphone-13.png',
+    description: 'As amazing as ever.',
+    price: 766,
+  },
+];
