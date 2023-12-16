@@ -7,7 +7,7 @@
 
 @layer utilities {
   .container-max-w {
-    @apply max-w-[1185px] mx-auto max-lg:px-6;
+    @apply max-w-[1185px] mx-auto px-6;
   }
 
   .underline-link::before {
@@ -61,6 +61,7 @@
     top: 0px;
   }
 
+
   .abs-img {
     transform: scale(1);
     animation: scaleUp 1s linear infinite alternate;
@@ -73,5 +74,13 @@
     100% {
       transform: scale(1.05);
     }
+
+  .custom-scrollbar {
+    scrollbar-width: none;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 0px;
+    border-radius: 2px;
   }
 }

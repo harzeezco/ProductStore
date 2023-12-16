@@ -17,7 +17,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        inter: ['var(--font--inter)'],
+        poppins: ['var(--font--poppins)'],
       },
       colors: {
         gray: {
