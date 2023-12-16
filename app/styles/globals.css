@@ -61,7 +61,6 @@
     top: 0px;
   }
 
-
   .abs-img {
     transform: scale(1);
     animation: scaleUp 1s linear infinite alternate;
@@ -74,6 +73,7 @@
     100% {
       transform: scale(1.05);
     }
+  }
 
   .custom-scrollbar {
     scrollbar-width: none;
@@ -82,5 +82,13 @@
   .custom-scrollbar::-webkit-scrollbar {
     width: 0px;
     border-radius: 2px;
+  }
+
+  .text-gradient {
+    letter-spacing: 0.1rem;
+    color: transparent;
+    background-image: linear-gradient(#e63d3d, #e7e74c);
+    background-clip: text;
+    -webkit-background-clip: text;
   }
 }

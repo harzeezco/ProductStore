@@ -5,7 +5,7 @@ import Bars from './bars';
 
 function Sidebar() {
   return (
-    <aside className='grid place-items-center bg-gray-100'>
+    <aside className='sticky inset-y-0 left-0 grid h-[79.5vh] place-items-center bg-gray-100'>
       <Image
         src='/png/home-assets/hero-assets/sale-shape.png'
         alt='get up to 50% off now'
@@ -13,10 +13,8 @@ function Sidebar() {
         height={120}
         className='abs-img mt-4'
       />
-      <nav>
 
-    <aside className='sticky inset-y-0 left-0 h-[79.5vh] bg-gray-100'>
-      <nav className='mt-10'>
+      <nav>
         <ul className='grid h-full'>
           {SideLinks.map((bars) => (
             <Bars key={bars.label} {...bars} />
