@@ -87,3 +87,57 @@ export const watchProducts = [
     discount: 668,
   },
 ];
+
+export const iMacProducts = [
+  {
+    id: 1,
+    name: 'MacBook Air',
+    img: [
+      'macbook-air-silver-m1.jpg',
+      'macbook-air-space-gray-m1.jpg',
+      'macbook-air-gold-m1.jpg',
+    ],
+    price: 1199,
+    discount: 999,
+    description: [
+      'M2 chip with 8-core CPU and 8-core GPU',
+      '13.3-inch Retina display with True Tone',
+      'Magic Keyboard with Touch ID',
+      '8GB unified memory (configurable up to 24GB)',
+      '256GB SSD storage (configurable up to 2TB)',
+    ],
+    colors: [
+      { name: 'silver', color: '#b2b5b8' },
+      { name: 'space-gray', color: '#f0e0d3' },
+      { name: 'gold', color: '#e0e2e1' },
+    ],
+    logo: 'apple-m1-icon.png',
+  },
+  {
+    id: 2,
+    name: 'MacBook Pro',
+    img: [
+      'macbook-air-midnight-m2.jpg',
+      'macbook-air-starlight-m2.jpg',
+      'macbook-air-spacegray-m2.jpg',
+      'macbook-air-silver-m2.jpg',
+    ],
+    price: 1599,
+    discount: 1299,
+    description: [
+      '4.2-inch or 16.2-inch Liquid Retina XDR display',
+      'Wi-Fi 6E and Bluetooth 5.3',
+      'M3 chip with 10-core CPU and 16-core GPU',
+      'Touch Bar and Touch ID',
+      'Three Thunderbolt 4 ports on 14-inch, four on 16-inch',
+      'Up to 17 hours of battery life on 14-inch',
+    ],
+    colors: [
+      { name: 'midnight', color: '#2e3641' },
+      { name: 'starlight', color: '#f0e5d3' },
+      { name: 'space gray', color: '#7d7e80' },
+      { name: 'silver', color: '#e3e4e6' },
+    ],
+    logo: 'apple-m2-icon.png',
+  },
+];

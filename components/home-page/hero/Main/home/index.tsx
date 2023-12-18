@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 function HomeProducts({ setActive }: { setActive: (active: string) => void }) {
   return (
-    <div className='grid grid-cols-[50%_50%] grid-rows-2 gap-3 overflow-hidden bg-gray-150'>
+    <section className='grid grid-cols-[50%_50%] grid-rows-2 gap-3 overflow-hidden bg-gray-150'>
       {homeProducts.map((product) => (
         <div
           key={product.name}
@@ -26,7 +26,7 @@ function HomeProducts({ setActive }: { setActive: (active: string) => void }) {
           </p>
         </div>
       ))}
-    </div>
+    </section>
   );
 }
 
