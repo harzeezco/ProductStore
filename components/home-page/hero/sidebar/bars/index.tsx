@@ -28,7 +28,7 @@ function Bars({
       <Image src={`/svg/${icon}`} alt={label} width={24} height={24} />
       <p className='grow justify-self-start text-gray-500'>{label}</p>
       <Image
-        src='/svg/folder.svg'
+        src={active === label ? '/svg/folder-open.svg' : '/svg/folder.svg'}
         alt='folder'
         width={24}
         height={24}
