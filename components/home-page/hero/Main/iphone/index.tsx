@@ -5,7 +5,7 @@ import React from 'react';
 
 function IPhoneProducts() {
   return (
-    <div className='h-full py-7'>
+    <section className='h-full py-7'>
       <ul className='flex items-center justify-around px-7'>
         {iPhoneProducts.map((product) => (
           <li>
@@ -14,14 +14,22 @@ function IPhoneProducts() {
               alt={product.name}
               width={130}
               height={180}
-              className='w-[12rem]'
+              className='w-[11rem]'
             />
-            <div className='mt-2 flex flex-col pl-3'>
+            <div className='mt-3 flex flex-col pl-3'>
               <span className='text-xl font-medium'>{product.name}</span>
-              <span className='text-base'>{product.description}</span>
-              <div className='mb-3 flex items-center justify-between'>
-                <span className='text-lg font-bold text-primary'>{`${product.price}$`}</span>
-                <button type='button' className='border-[1.5px] border-gray-100 p-1'>
+              <span className='text-base text-gray-600'>
+                {product.description}
+              </span>
+              <div className='my-3 flex items-center justify-between'>
+                <div className='flex gap-1.5'>
+                  <span className='text-lg font-bold text-primary'>{`${product.discount}$`}</span>
+                  <span className='text-base font-semibold text-gray-300 line-through'>{`${product.price}$`}</span>
+                </div>
+                <button
+                  type='button'
+                  className='border-[1.5px] border-gray-100 p-1'
+                >
                   <Image
                     src='/svg/favorite-icon.svg'
                     alt='favorite'
@@ -35,7 +43,7 @@ function IPhoneProducts() {
           </li>
         ))}
       </ul>
-    </div>
+    </section>
   );
 }
 

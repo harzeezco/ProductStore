@@ -5,10 +5,16 @@ import MacBookProducts from './macbook';
 import WatchProducts from './watch';
 import IMacProducts from './imac';
 
-function Main({ active }: { active: string }) {
+function Main({
+  active,
+  setActive,
+}: {
+  active: string;
+  setActive: (active: string) => void;
+}) {
   return (
     <main className=''>
-      {active === 'Home' && <HomeProducts />}
+      {active === 'Home' && <HomeProducts setActive={setActive} />}
       {active === 'iPhone' && <IPhoneProducts />}
       {active === 'MacBook' && <MacBookProducts />}
       {active === 'Watch' && <WatchProducts />}
