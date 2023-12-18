@@ -6,7 +6,10 @@ function HomeProducts() {
   return (
     <div className='grid grid-cols-[50%_50%] grid-rows-2 gap-3 overflow-hidden bg-gray-150'>
       {homeProducts.map((product) => (
-        <div key={product.name} className='grid place-items-center bg-white py-4'>
+        <div
+          key={product.name}
+          className='grid place-items-center bg-white py-4'
+        >
           <Image
             src={`/png/home-assets/hero-assets/${product.img}`}
             alt={product.name}

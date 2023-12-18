@@ -23,7 +23,12 @@ function Sidebar({
       <nav>
         <ul className='grid h-full'>
           {SideLinks.map((bars) => (
-            <Bars key={bars.label} {...bars} setActive={setActive} active={active} />
+            <Bars
+              key={bars.label}
+              {...bars}
+              setActive={setActive}
+              active={active}
+            />
           ))}
         </ul>
       </nav>
