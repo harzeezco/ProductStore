@@ -5,6 +5,29 @@ import MacBookProducts from './macbook';
 import WatchProducts from './watch';
 import IMacProducts from './imac';
 
+const components = [
+  {
+    name: 'Home',
+    Component: HomeProducts,
+  },
+  {
+    name: 'iPhone',
+    Component: IPhoneProducts,
+  },
+  {
+    name: 'MacBook',
+    Component: MacBookProducts,
+  },
+  {
+    name: 'Watch',
+    Component: WatchProducts,
+  },
+  {
+    name: 'iMac',
+    Component: IMacProducts,
+  },
+];
+
 function Main({
   active,
   setActive,
@@ -12,13 +35,15 @@ function Main({
   active: string;
   setActive: (active: string) => void;
 }) {
+  const filteredComponent = components.filter(
+    (component) => component.name === active,
+  );
+
   return (
-    <main className=''>
-      {active === 'Home' && <HomeProducts setActive={setActive} />}
-      {active === 'iPhone' && <IPhoneProducts />}
-      {active === 'MacBook' && <MacBookProducts />}
-      {active === 'Watch' && <WatchProducts />}
-      {active === 'iMac' && <IMacProducts />}
+    <main>
+      {filteredComponent.map(({ Component }) => (
+        <Component setActive={setActive} />
+      ))}
     </main>
   );
 }

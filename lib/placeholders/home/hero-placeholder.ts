@@ -88,7 +88,7 @@ export const watchProducts = [
   },
 ];
 
-export const iMacProducts = [
+export const MacBookProduct = [
   {
     id: 1,
     name: 'MacBook Air',
@@ -141,3 +141,36 @@ export const iMacProducts = [
     logo: 'apple-m2-icon.png',
   },
 ];
+
+export const iMacProducts = {
+  orange: [
+    { alt: 'iMac side', img: 'orange-side.jpg' },
+    { alt: 'iMac front', img: 'orange-front.jpg' },
+    { alt: 'iMac back', img: 'orange-back.jpg' },
+  ],
+  green: [
+    { alt: 'iMac side', img: 'green-side.jpg' },
+    { alt: 'iMac front', img: 'green-front.jpg' },
+    { alt: 'iMac back', img: 'green-back.jpg' },
+  ],
+  pink: [
+    { alt: 'iMac side', img: 'pink-side.jpg' },
+    { alt: 'iMac front', img: 'pink-front.jpg' },
+    { alt: 'iMac back', img: 'pink-back.jpg' },
+  ],
+  silver: [
+    { alt: 'iMac side', img: 'silver-side.jpg' },
+    { alt: 'iMac front', img: 'silver-front.jpg' },
+    { alt: 'iMac back', img: 'silver-back.jpg' },
+  ],
+  yellow: [
+    { alt: 'iMac side', img: 'yellow-side.jpg' },
+    { alt: 'iMac front', img: 'yellow-front.jpg' },
+    { alt: 'iMac back', img: 'yellow-back.jpg' },
+  ],
+  purple: [
+    { alt: 'iMac side', img: 'purple-side.jpg' },
+    { alt: 'iMac front', img: 'purple-front.jpg' },
+    { alt: 'iMac back', img: 'purple-back.jpg' },
+  ],
+};
