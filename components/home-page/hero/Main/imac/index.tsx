@@ -1,10 +1,10 @@
 import Button from '@/components/ui/button';
-import Tooltip from '@/components/ui/tooltip';
+import Colors from '@/components/ui/colors';
 import { iMacProducts } from '@/lib/placeholders/home/hero-placeholder';
 import Image from 'next/image';
 import React, { useState } from 'react';
 
-const Colors = [
+const Color = [
   {
     type: 'green',
     color: '#10505b',
@@ -40,21 +40,7 @@ function IMacProducts() {
         Buy Now
       </Button>
       <div className='absolute left-4 top-1/2 -translate-y-1/2'>
-        <div className='flex flex-col gap-2'>
-          {Colors.map(({ color, type }) => (
-            <Tooltip style={{ backgroundColor: color }} tooltipText={type}>
-              <span
-                role='button'
-                aria-label='presentation'
-                onClick={() => setActive(type)}
-                onKeyDown={() => setActive(type)}
-                tabIndex={-1}
-                className='relative rounded-full p-3 transition-[1s] duration-75 ease-in'
-                style={{ backgroundColor: color }}
-              />
-            </Tooltip>
-          ))}
-        </div>
+        <Colors colors={Color} setActive={setActive} />
       </div>
       <div className='grid h-full grid-cols-2 grid-rows-2 gap-3'>
         {iMacProducts[active].map((product) => (
