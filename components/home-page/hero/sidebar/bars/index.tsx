@@ -26,13 +26,15 @@ function Bars({
       tabIndex={-1}
     >
       <Image src={`/svg/${icon}`} alt={label} width={24} height={24} />
-      <p className='grow justify-self-start text-gray-500'>{label}</p>
+      <p className='grow justify-self-start text-gray-500 max-md:hidden'>
+        {label}
+      </p>
       <Image
         src={active === label ? '/svg/folder-open.svg' : '/svg/folder.svg'}
         alt='folder'
         width={24}
         height={24}
-        className='ml-8'
+        className='ml-8 max-md:hidden'
       />
     </li>
   );

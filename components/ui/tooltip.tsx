@@ -1,29 +1,24 @@
-import cn from '@/lib/utils';
-import React from 'react';
+import React, { ReactNode } from 'react';
+
+type TooltipProps = {
+  children: ReactNode;
+  tooltipText?: string;
+  tooltipClasses?: string;
+  style?: {};
+};
 
 function Tooltip({
-  btnText,
-  btnClasses,
+  children,
   tooltipText,
   tooltipClasses,
   style,
-  onClick,
-}) {
+}: TooltipProps) {
   return (
     <button
       type='button'
       className='group relative inline-flex items-center justify-center rounded-lg p-0.5 text-sm font-medium text-gray-900 transition-all hover:text-white focus:outline-none focus:ring-4 focus:ring-primary'
-      onClick={onClick}
     >
-      <span
-        className={cn(
-          'relative rounded-full bg-white transition-[1s] duration-75 ease-in dark:bg-gray-900',
-          btnClasses,
-        )}
-        style={style}
-      >
-        {btnText}
-      </span>
+      {children}
       <div className='hidden group-hover:block'>
         <div className='group absolute left-full top-1/2 z-50 flex -translate-y-1/2 items-center rounded-sm text-center text-sm text-white transition-all before:-top-2'>
           <span

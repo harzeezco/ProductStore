@@ -1,17 +1,17 @@
 import React, { ReactNode } from 'react';
-import mergeClasses from '@/lib/utils';
 import cn from '@/lib/utils';
 
 type ButtonProp = {
   children: string | ReactNode;
   variant?: string;
+  className?: string;
   onClick: () => void;
 };
 
 function Button({
   children = null,
   variant = 'primary',
-  className,
+  className = '',
   onClick,
   ...otherProps
 }: ButtonProp) {
@@ -20,7 +20,10 @@ function Button({
       return (
         <button
           type='button'
-          className={cn('w-fit rounded-sm bg-primary px-7 py-2 font-medium text-white', className)}
+          className={cn(
+            'w-fit rounded-sm bg-primary px-7 py-2 font-medium text-white',
+            className,
+          )}
           onClick={onClick}
           {...otherProps}
         >
@@ -40,7 +43,7 @@ function Button({
       return (
         <button
           type='button'
-          className={mergeClasses(
+          className={cn(
             'btn-blue flex w-auto items-center justify-center rounded-[25px] border-none bg-blue-700 px-[30px] py-3 font-semibold text-white transition-pop-up',
           )}
         >

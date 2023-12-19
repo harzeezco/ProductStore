@@ -50,7 +50,10 @@ function MacBookProducts() {
       <div className='mt-8 flex justify-center'>
         {MacBookProduct.filter((product) => product.id === active).map(
           (product) => (
-            <div key={product.id} className='flex items-center gap-10'>
+            <div
+              key={product.id}
+              className='flex flex-col items-center gap-x-10 gap-y-7 max-md:px-6'
+            >
               <Image
                 src={`/png/home-assets/hero-assets/${product.img[color]}`}
                 alt=''

@@ -4,8 +4,8 @@ import Card from '../card';
 
 function WatchProducts() {
   return (
-    <section className='flex h-full items-center'>
-      <ul className='flex items-center justify-around px-7'>
+    <section className='flex h-full items-center py-7'>
+      <ul className='grid place-items-center gap-9 px-7 sm:grid-cols-2 lg:grid-cols-3'>
         {watchProducts.map((product) => (
           <Card
             key={product.name}

@@ -17,7 +17,7 @@ function Sidebar({
         alt='get up to 50% off now'
         width={120}
         height={120}
-        className='abs-img mt-4'
+        className='abs-img mt-4 max-md:hidden'
       />
 
       <nav>

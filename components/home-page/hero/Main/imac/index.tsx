@@ -42,16 +42,21 @@ function IMacProducts() {
       <div className='absolute left-4 top-1/2 -translate-y-1/2'>
         <div className='flex flex-col gap-2'>
           {Colors.map(({ color, type }) => (
-            <Tooltip
-              tooltipText={type}
-              style={{ background: color }}
-              btnClasses='rounded-full p-3'
-              onClick={() => setActive(type)}
-            />
+            <Tooltip style={{ backgroundColor: color }} tooltipText={type}>
+              <span
+                role='button'
+                aria-label='presentation'
+                onClick={() => setActive(type)}
+                onKeyDown={() => setActive(type)}
+                tabIndex={-1}
+                className='relative rounded-full p-3 transition-[1s] duration-75 ease-in'
+                style={{ backgroundColor: color }}
+              />
+            </Tooltip>
           ))}
         </div>
       </div>
-      <div className='grid grid-cols-2 grid-rows-2 gap-3'>
+      <div className='grid h-full grid-cols-2 grid-rows-2 gap-3'>
         {iMacProducts[active].map((product) => (
           <div
             className='grid place-items-center bg-gray-50 p-6'
@@ -62,7 +67,7 @@ function IMacProducts() {
               alt={product.alt}
               width={240}
               height={270}
-              className='max-h-[320px] object-contain'
+              className='max-h-[320px] md:object-contain'
             />
           </div>
         ))}
@@ -72,11 +77,3 @@ function IMacProducts() {
 }
 
 export default IMacProducts;
-// .map((product) => (
-//           <Image
-//             src={`/png/home-assets/hero-assets/imac/${product}`}
-//             alt={product}
-//             width={240}
-//             height={370}
-//           />
-//         ))
