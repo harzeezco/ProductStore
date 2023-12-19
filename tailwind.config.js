@@ -21,6 +21,7 @@ module.exports = {
       },
       colors: {
         gray: {
+          50: '#fafafa',
           100: '#F5F5F5',
           150: '#f8f8f8',
           200: '#c0c0c0',
@@ -55,10 +56,6 @@ module.exports = {
         popover: {
           DEFAULT: 'hsl(var(--popover))',
           foreground: 'hsl(var(--popover-foreground))',
-        },
-        card: {
-          DEFAULT: 'hsl(var(--card))',
-          foreground: 'hsl(var(--card-foreground))',
         },
       },
       keyframes: {

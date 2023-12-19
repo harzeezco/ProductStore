@@ -1,5 +1,6 @@
-import mergeClasses from '@/lib/utils';
 import React, { ReactNode } from 'react';
+import mergeClasses from '@/lib/utils';
+import cn from '@/lib/utils';
 
 type ButtonProp = {
   children: string | ReactNode;
@@ -10,6 +11,7 @@ type ButtonProp = {
 function Button({
   children = null,
   variant = 'primary',
+  className,
   onClick,
   ...otherProps
 }: ButtonProp) {
@@ -18,7 +20,7 @@ function Button({
       return (
         <button
           type='button'
-          className='w-fit rounded-sm bg-primary px-7 py-2 font-medium text-white'
+          className={cn('w-fit rounded-sm bg-primary px-7 py-2 font-medium text-white', className)}
           onClick={onClick}
           {...otherProps}
         >

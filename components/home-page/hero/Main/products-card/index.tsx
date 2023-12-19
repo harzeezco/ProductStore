@@ -30,13 +30,13 @@ function Card({
         height={180}
         className='w-[12rem]'
       />
-      <div className='mt-3 flex flex-col pl-3'>
-        <span className='text-xl font-medium'>{name}</span>
+      <div className='mt-5 flex flex-col pl-3'>
+        <p className='text-xl font-semibold'>{name}</p>
         <span className='text-base text-gray-600'>{description}</span>
         <div className='my-3 flex items-center justify-between'>
           <div className='flex gap-1.5'>
-            <span className='text-lg font-bold text-primary'>{`${discount}$`}</span>
-            <span className='text-base font-semibold text-gray-300 line-through'>{`${price}$`}</span>
+            <span className='text-lg font-semibold text-primary'>{`${discount}$`}</span>
+            <span className='text-base font-medium text-gray-300 line-through'>{`${price}$`}</span>
           </div>
           <button type='button' className='border-[1.5px] border-gray-100 p-1'>
             <Image
@@ -47,7 +47,7 @@ function Card({
             />
           </button>
         </div>
-        <Button variant='primary'>{btnText}</Button>
+        <Button onClick={() => {}} variant='primary'>{btnText}</Button>
       </div>
     </li>
   );
