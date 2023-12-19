@@ -32,6 +32,7 @@ function MacBookProducts() {
       <div className='flex justify-center'>
         {chips.map((chip) => (
           <div
+            key={chip.id}
             className={cn(
               `cursor-pointer border-[1.5px] border-solid px-5 py-3 transition-all hover:bg-slate-300 ${chip.radius}`,
               active === chip.id ? 'bg-slate-300' : '',
@@ -81,7 +82,7 @@ function MacBookProducts() {
                     <li>✔ {description}</li>
                   ))}
                 </ul>
-                <Button variant='primary'>Buy Now</Button>
+                <Button onClick={() => {}}>Buy Now</Button>
               </div>
             </div>
           ),

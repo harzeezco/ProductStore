@@ -4,7 +4,7 @@ import Image from 'next/image';
 import cn from '@/lib/utils';
 
 function Logo({
-  srcForSymbolLogo = '',
+  srcForSymbolLogo = '/png/shared-assets/logo-symbol.png',
   srcForTextLogo = '',
   hasTextLogo = true,
 }: {
@@ -25,10 +25,5 @@ function Logo({
     </Link>
   );
 }
-
-Logo.defaultProps = {
-  srcForSymbolLogo: '/png/shared-assets/logo-symbol.png',
-  hasTextLogo: true,
-};
 
 export default Logo;

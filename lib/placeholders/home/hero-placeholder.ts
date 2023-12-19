@@ -142,35 +142,136 @@ export const MacBookProduct = [
   },
 ];
 
-export const iMacProducts = {
+interface ProductImage {
+  alt: string;
+  img: string;
+  gridCol: string;
+  gridRow: string;
+}
+
+interface IMacProductsProps {
+  [key: string]: ProductImage[];
+}
+
+export const iMacProducts: IMacProductsProps = {
   orange: [
-    { alt: 'iMac side', img: 'orange-side.jpg' },
-    { alt: 'iMac front', img: 'orange-front.jpg' },
-    { alt: 'iMac back', img: 'orange-back.jpg' },
+    {
+      alt: 'iMac side',
+      img: 'orange-side.jpg',
+      gridCol: '1 / 2',
+      gridRow: '1 / 3',
+    },
+    {
+      alt: 'iMac front',
+      img: 'orange-front.jpg',
+      gridCol: '2 / -1',
+      gridRow: '1 / 2',
+    },
+    {
+      alt: 'iMac back',
+      img: 'orange-back.jpg',
+      gridCol: '2 / 3',
+      gridRow: '2 / 3',
+    },
   ],
   green: [
-    { alt: 'iMac side', img: 'green-side.jpg' },
-    { alt: 'iMac front', img: 'green-front.jpg' },
-    { alt: 'iMac back', img: 'green-back.jpg' },
+    {
+      alt: 'iMac side',
+      img: 'green-side.jpg',
+      gridCol: '1 / 2',
+      gridRow: '1 / 3',
+    },
+    {
+      alt: 'iMac front',
+      img: 'green-front.jpg',
+      gridCol: '2 / -1',
+      gridRow: '1 / 2',
+    },
+    {
+      alt: 'iMac back',
+      img: 'green-back.jpg',
+      gridCol: '2 / 3',
+      gridRow: '2 / 3',
+    },
   ],
   pink: [
-    { alt: 'iMac side', img: 'pink-side.jpg' },
-    { alt: 'iMac front', img: 'pink-front.jpg' },
-    { alt: 'iMac back', img: 'pink-back.jpg' },
+    {
+      alt: 'iMac side',
+      img: 'pink-side.jpg',
+      gridCol: '1 / 2',
+      gridRow: '1 / 3',
+    },
+    {
+      alt: 'iMac front',
+      img: 'pink-front.jpg',
+      gridCol: '2 / -1',
+      gridRow: '1 / 2',
+    },
+    {
+      alt: 'iMac back',
+      img: 'pink-back.jpg',
+      gridCol: '2 / 3',
+      gridRow: '2 / 3',
+    },
   ],
   silver: [
-    { alt: 'iMac side', img: 'silver-side.jpg' },
-    { alt: 'iMac front', img: 'silver-front.jpg' },
-    { alt: 'iMac back', img: 'silver-back.jpg' },
+    {
+      alt: 'iMac side',
+      img: 'silver-side.jpg',
+      gridCol: '1 / 2',
+      gridRow: '1 / 3',
+    },
+    {
+      alt: 'iMac front',
+      img: 'silver-front.jpg',
+      gridCol: '2 / -1',
+      gridRow: '1 / 2',
+    },
+    {
+      alt: 'iMac back',
+      img: 'silver-back.jpg',
+      gridCol: '2 / 3',
+      gridRow: '2 / 3',
+    },
   ],
   yellow: [
-    { alt: 'iMac side', img: 'yellow-side.jpg' },
-    { alt: 'iMac front', img: 'yellow-front.jpg' },
-    { alt: 'iMac back', img: 'yellow-back.jpg' },
+    {
+      alt: 'iMac side',
+      img: 'yellow-side.jpg',
+      gridCol: '1 / 2',
+      gridRow: '1 / 3',
+    },
+    {
+      alt: 'iMac front',
+      img: 'yellow-front.jpg',
+      gridCol: '2 / -1',
+      gridRow: '1 / 2',
+    },
+    {
+      alt: 'iMac back',
+      img: 'yellow-back.jpg',
+      gridCol: '2 / 3',
+      gridRow: '2 / 3',
+    },
   ],
   purple: [
-    { alt: 'iMac side', img: 'purple-side.jpg' },
-    { alt: 'iMac front', img: 'purple-front.jpg' },
-    { alt: 'iMac back', img: 'purple-back.jpg' },
+    {
+      alt: 'iMac side',
+      img: 'purple-side.jpg',
+      gridCol: '1 / 2',
+      gridRow: '1 / 3',
+    },
+    {
+      alt: 'iMac front',
+      img: 'purple-front.jpg',
+      gridCol: '2 / -1',
+      gridRow: '1 / 2',
+    },
+    {
+      alt: 'iMac back',
+      img: 'purple-back.jpg',
+      gridCol: '2 / 3',
+      gridRow: '2 / 3',
+    },
   ],
 };

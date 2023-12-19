@@ -3,16 +3,24 @@ import React, { ReactNode } from 'react';
 
 type ButtonProp = {
   children: string | ReactNode;
-  variant: string;
+  variant?: string;
+  onClick: () => void;
 };
 
-function Button({ children = null, variant = 'blue' }: ButtonProp) {
+function Button({
+  children = null,
+  variant = 'primary',
+  onClick,
+  ...otherProps
+}: ButtonProp) {
   switch (variant) {
     case 'primary':
       return (
         <button
           type='button'
           className='w-fit rounded-sm bg-primary px-7 py-2 font-medium text-white'
+          onClick={onClick}
+          {...otherProps}
         >
           {children}
         </button>
@@ -41,5 +49,9 @@ function Button({ children = null, variant = 'blue' }: ButtonProp) {
       return null;
   }
 }
+
+Button.defaultProps = {
+  variant: 'primary',
+};
 
 export default Button;

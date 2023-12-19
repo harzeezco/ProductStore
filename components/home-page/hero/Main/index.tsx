@@ -1,4 +1,5 @@
 import React from 'react';
+import ErrorFallback from '@/components/ui/ErrorFallback';
 import HomeProducts from './home';
 import IPhoneProducts from './iphone';
 import MacBookProducts from './macbook';
@@ -41,9 +42,13 @@ function Main({
 
   return (
     <main>
-      {filteredComponent.map(({ Component }) => (
-        <Component setActive={setActive} />
-      ))}
+      {filteredComponent.length ? (
+        filteredComponent.map(({ Component, name }) => (
+          <Component key={name} setActive={setActive} />
+        ))
+      ) : (
+        <ErrorFallback onClick={() => setActive('Home')} />
+      )}
     </main>
   );
 }
