@@ -13,6 +13,7 @@
     "react/jsx-props-no-spreading": "off",
     "react/jsx-one-expression-per-line": "off",
     "jsx-a11y/no-noninteractive-element-interactions": "off",
-    "react/require-default-props": "off"
+    "react/require-default-props": "off",
+    "react/jsx-no-bind": "off"
   }
 }

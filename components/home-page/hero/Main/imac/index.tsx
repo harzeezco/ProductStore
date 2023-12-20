@@ -1,8 +1,7 @@
 import Button from '@/components/ui/button';
 import Colors from '@/components/ui/colors';
-import { iMacProducts } from '@/lib/placeholders/home/hero-placeholder';
-import Image from 'next/image';
 import React, { useState } from 'react';
+import ImacCard from '../cards/imac';
 
 const Color = [
   {
@@ -43,20 +42,7 @@ function IMacProducts() {
         <Colors colors={Color} setActive={setActive} />
       </div>
       <div className='grid h-full grid-cols-2 grid-rows-2 gap-3'>
-        {iMacProducts[active].map((product) => (
-          <div
-            className='grid place-items-center bg-gray-50 p-6'
-            style={{ gridColumn: product.gridCol, gridRow: product.gridRow }}
-          >
-            <Image
-              src={`/png/home-assets/hero-assets/imac/${product.img}`}
-              alt={product.alt}
-              width={240}
-              height={270}
-              className='max-h-[320px] md:object-contain'
-            />
-          </div>
-        ))}
+        <ImacCard active={active} />
       </div>
     </section>
   );

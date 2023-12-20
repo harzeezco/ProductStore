@@ -1,7 +1,8 @@
+import BoxChip from '@/components/ui/box-chip';
 import Button from '@/components/ui/button';
-import { MacBookProduct } from '@/lib/placeholders/home/hero-placeholder';
+import PricingFavorite from '@/components/ui/price-fav';
 
-import cn from '@/lib/utils';
+import { MacBookProduct } from '@/lib/placeholders/home/hero-placeholder';
 import Image from 'next/image';
 import React, { useState } from 'react';
 
@@ -30,45 +31,36 @@ function MacBookProducts() {
   return (
     <section className='h-full py-7'>
       <div className='flex justify-center'>
-        {chips.map((chip) => (
-          <div
-            key={chip.id}
-            className={cn(
-              `cursor-pointer border-[1.5px] border-solid px-5 py-3 transition-all hover:bg-slate-300 ${chip.radius}`,
-              active === chip.id ? 'bg-slate-300' : '',
-            )}
-            onClick={() => handleClick(chip.id)}
-            onKeyDown={() => handleClick(chip.id)}
-            role='button'
-            tabIndex={-1}
-          >
-            <span className='font-medium'>{chip.type}</span>
-          </div>
+        {chips.map((items) => (
+          <BoxChip
+            key={items.id}
+            active={active}
+            {...items}
+            onClick={handleClick}
+          />
         ))}
       </div>
 
-      <div className='mt-8 flex justify-center'>
+      <div className='mt-4 flex justify-center'>
         {MacBookProduct.filter((product) => product.id === active).map(
-          (product) => (
-            <div
-              key={product.id}
-              className='flex flex-col items-center gap-x-10 gap-y-7 max-md:px-6'
-            >
+          ({ img, name, id, discount, colors, price, description }) => (
+            <div key={id} className='flex flex-col items-center max-md:px-6'>
               <Image
-                src={`/png/home-assets/hero-assets/${product.img[color]}`}
+                src={`/png/home-assets/hero-assets/${img[color]}`}
                 alt=''
                 width={240}
                 height={370}
               />
               <div className='flex flex-col'>
-                <h1 className='text-2xl font-semibold'>{product.name}</h1>
-                <div className='flex gap-1.5'>
-                  <span className='text-lg font-bold text-primary'>{`${product.discount}$`}</span>
-                  <span className='text-base font-semibold text-gray-300 line-through'>{`${product.price}$`}</span>
-                </div>
+                <h1 className='text-2xl font-semibold'>{name}</h1>
+                <PricingFavorite
+                  discount={discount}
+                  price={price}
+                  className='mb-2 mt-1'
+                />
                 <div className='flex w-fit items-center gap-2'>
-                  <span className='text-xl'>Colors:</span>
-                  {product.colors.map((colorType, idx) => (
+                  <span className='font-medium'>Colors:</span>
+                  {colors.map((colorType, idx) => (
                     <div>
                       <button
                         type='button'
@@ -81,8 +73,8 @@ function MacBookProducts() {
                   ))}
                 </div>
                 <ul className='my-4 flex flex-col'>
-                  {product.description.map((description) => (
-                    <li>✔ {description}</li>
+                  {description.map((list) => (
+                    <li>✔ {list}</li>
                   ))}
                 </ul>
                 <Button onClick={() => {}}>Buy Now</Button>

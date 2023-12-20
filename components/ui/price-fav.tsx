@@ -1,12 +1,21 @@
-import Image from 'next/image';
 import React from 'react';
+import Image from 'next/image';
+import cn from '@/lib/utils';
 
-function PriceFav({ discount, price }) {
+function PricingFavorite({
+  discount,
+  price,
+  className = ''
+}: {
+  discount: number;
+  price: number;
+    className: string;
+}) {
   return (
-    <div className='my-3 flex items-center justify-between'>
+    <div className={cn('flex items-center justify-between', className)}>
       <div className='flex gap-1.5'>
-        <span className='text-lg font-semibold text-primary'>{`${discount}$`}</span>
-        <span className='text-base font-medium text-gray-300 line-through'>{`${price}$`}</span>
+        <span className='text-lg font-semibold text-primary'>{`$${discount}`}</span>
+        <span className='text-base font-medium text-gray-300 line-through'>{`$${price}`}</span>
       </div>
       <button type='button' className='border-[1.5px] border-gray-100 p-1'>
         <Image
@@ -20,4 +29,4 @@ function PriceFav({ discount, price }) {
   );
 }
 
-export default PriceFav;
+export default PricingFavorite;

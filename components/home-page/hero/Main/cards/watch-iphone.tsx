@@ -1,9 +1,9 @@
-import React from 'react';
-import Image from 'next/image';
 import Button from '@/components/ui/button';
-import PriceFav from '@/components/ui/price-fav';
+import PricingFavorite from '@/components/ui/price-fav';
+import Image from 'next/image';
+import React from 'react';
 
-type CardProps = {
+type WatchIphoneCardProps = {
   img: string;
   name: string;
   discount: number;
@@ -13,7 +13,7 @@ type CardProps = {
   imgSrc?: string;
 };
 
-function Card({
+function WatchIphoneCard({
   img,
   imgSrc = '/png/home-assets/hero-assets/',
   name,
@@ -21,7 +21,7 @@ function Card({
   price,
   description,
   btnText = 'Buy Now',
-}: CardProps) {
+}: WatchIphoneCardProps) {
   return (
     <li>
       <Image
@@ -32,9 +32,9 @@ function Card({
         className='w-[12rem]'
       />
       <div className='mt-5 flex flex-col pl-3'>
-        <p className='text-xl font-semibold'>{name}</p>
+        <h3 className='text-lg font-semibold'>{name}</h3>
         <span className='text-base text-gray-600'>{description}</span>
-        <PriceFav discount={discount} price={price} />
+        <PricingFavorite discount={discount} price={price} className='my-3' />
         <Button onClick={() => {}} variant='primary'>
           {btnText}
         </Button>
@@ -43,9 +43,4 @@ function Card({
   );
 }
 
-Card.defaultProps = {
-  btnText: 'Buy Now',
-  imgSrc: '/png/home-assets/hero-assets/',
-};
-
-export default Card;
+export default WatchIphoneCard;
