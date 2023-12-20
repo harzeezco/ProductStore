@@ -5,6 +5,7 @@ import PricingFavorite from '@/components/ui/price-fav';
 import { MacBookProduct } from '@/lib/placeholders/home/hero-placeholder';
 import Image from 'next/image';
 import React, { useState } from 'react';
+import MacBookColors from './macbook-colors';
 
 const chips = [
   {
@@ -60,17 +61,7 @@ function MacBookProducts() {
                 />
                 <div className='flex w-fit items-center gap-2'>
                   <span className='font-medium'>Colors:</span>
-                  {colors.map((colorType, idx) => (
-                    <div>
-                      <button
-                        type='button'
-                        aria-label='presentation'
-                        className='rounded-full p-3'
-                        style={{ background: colorType.color }}
-                        onClick={() => setColor(idx)}
-                      />
-                    </div>
-                  ))}
+                  <MacBookColors colors={colors} setColor={setColor} />
                 </div>
                 <ul className='my-4 flex flex-col'>
                   {description.map((list) => (

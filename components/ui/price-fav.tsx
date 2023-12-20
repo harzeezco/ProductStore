@@ -5,11 +5,11 @@ import cn from '@/lib/utils';
 function PricingFavorite({
   discount,
   price,
-  className = ''
+  className = '',
 }: {
   discount: number;
   price: number;
-    className: string;
+  className: string;
 }) {
   return (
     <div className={cn('flex items-center justify-between', className)}>

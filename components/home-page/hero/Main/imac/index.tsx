@@ -1,7 +1,7 @@
 import Button from '@/components/ui/button';
 import Colors from '@/components/ui/colors';
 import React, { useState } from 'react';
-import ImacCard from '../cards/imac';
+import ImacCard from '../cards/imac-card';
 
 const Color = [
   {

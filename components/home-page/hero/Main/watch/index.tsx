@@ -1,6 +1,6 @@
 import React from 'react';
 import { watchProducts } from '@/lib/placeholders/home/hero-placeholder';
-import WatchIphoneCard from '../cards/watch-iphone';
+import WatchIphoneCard from '../cards/watch-iphone-card';
 
 function WatchProducts() {
   return (
@@ -10,7 +10,7 @@ function WatchProducts() {
           <WatchIphoneCard
             key={product.name}
             {...product}
-            imgSrc='/png/home-assets/hero-assets/watch/'
+            imgPath='/png/home-assets/hero-assets/watch/'
           />
         ))}
       </ul>

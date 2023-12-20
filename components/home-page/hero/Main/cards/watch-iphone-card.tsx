@@ -1,35 +1,44 @@
 import Button from '@/components/ui/button';
 import PricingFavorite from '@/components/ui/price-fav';
 import Image from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
 
 type WatchIphoneCardProps = {
-  img: string;
+  img?: string;
+  defaultImg?: string;
+  animateImg?: string;
   name: string;
   discount: number;
   price: number;
   description: string;
   btnText?: string;
-  imgSrc?: string;
+  imgPath?: string;
 };
 
 function WatchIphoneCard({
   img,
-  imgSrc = '/png/home-assets/hero-assets/',
+  defaultImg,
+  animateImg,
+  imgPath = '/png/home-assets/hero-assets/',
   name,
   discount,
   price,
   description,
   btnText = 'Buy Now',
 }: WatchIphoneCardProps) {
+  const [isHovered, setIsHovered] = useState(false);
+  const hoverImg = isHovered ? animateImg : defaultImg;
+
   return (
     <li>
       <Image
-        src={`${imgSrc}${img}`}
+        src={`${imgPath}${img || hoverImg}`}
         alt={name}
         width={130}
         height={180}
         className='w-[12rem]'
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
       />
       <div className='mt-5 flex flex-col pl-3'>
         <h3 className='text-lg font-semibold'>{name}</h3>

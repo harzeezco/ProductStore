@@ -1,7 +1,13 @@
 import React from 'react';
 import Tooltip from './tooltip';
 
-function Colors({ colors, setActive }) {
+function Colors({
+  colors,
+  setActive,
+}: {
+  colors: { type: string; color: string }[];
+  setActive: (type: string) => void;
+}) {
   return (
     <div className='flex flex-col gap-2'>
       {colors.map(({ color, type }) => (

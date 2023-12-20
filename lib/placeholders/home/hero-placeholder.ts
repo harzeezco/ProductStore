@@ -67,21 +67,24 @@ export const iPhoneProducts = [
 export const watchProducts = [
   {
     name: 'Apple Watch Series 8',
-    img: 'watch-compare-s8-img-1.jpg',
+    defaultImg: 'watch-compare-s8-img-1.jpg',
+    animateImg: 'watch-compare-s8-img-2.jpg',
     description: '45mm or 41mm case size \n 50m water resistant \n Swimproof',
     price: 1200,
     discount: 999,
   },
   {
     name: 'Apple Watch SE',
-    img: 'watch-compare-se-img-1.jpg',
+    defaultImg: 'watch-compare-se-img-1.jpg',
+    animateImg: 'watch-compare-se-img-2.jpg',
     description: '45mm or 41mm case size \n 50m water resistant \n Swimproof',
     price: 999,
     discount: 766,
   },
   {
     name: 'Apple Watch Ultra',
-    img: 'watch-compare-ultra-img-1.jpg',
+    defaultImg: 'watch-compare-ultra-img-1.jpg',
+    animateImg: 'watch-compare-ultra-img-2.jpg',
     description: '44mm or 40mm case size \n 50m water resistant \n Swimproof',
     price: 766,
     discount: 668,

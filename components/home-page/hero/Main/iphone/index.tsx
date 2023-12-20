@@ -1,6 +1,6 @@
 import React from 'react';
 import { iPhoneProducts } from '@/lib/placeholders/home/hero-placeholder';
-import WatchIphoneCard from '../cards/watch-iphone';
+import WatchIphoneCard from '../cards/watch-iphone-card';
 
 function IPhoneProducts() {
   return (
