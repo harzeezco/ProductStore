@@ -39,12 +39,13 @@ function Button({
           {children}
         </button>
       );
-    case 'blue':
+    case 'submit':
       return (
         <button
-          type='button'
+          type='submit'
           className={cn(
-            'btn-blue flex w-auto items-center justify-center rounded-[25px] border-none bg-blue-700 px-[30px] py-3 font-semibold text-white transition-pop-up',
+            'w-fit rounded-sm bg-primary px-7 py-2 font-medium text-white',
+            className,
           )}
         >
           {children}
