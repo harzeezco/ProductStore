@@ -16,8 +16,12 @@ import {
 import { Input } from '@/components/ui/input';
 import Button from '@/components/ui/button';
 import useSignup from '@/authentication/useSignup';
+import { useRouter } from 'next/navigation';
 
 const formSchema = z.object({
+  name: z.string().min(2, {
+    message: 'Username must be at least 2 characters.',
+  }),
   email: z.string().min(2, {
     message: 'Username must be at least 2 characters.',
   }),
@@ -26,20 +30,27 @@ const formSchema = z.object({
   }),
 });
 
-function LogIn() {
+function SignUp() {
+  const router = useRouter();
   const { signupUser, isLoading } = useSignup();
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
+      name: '',
       email: '',
       password: '',
     },
   });
-  async function onSubmit(values: z.infer<typeof formSchema>) {
-    const { email, password } = values;
+  function onSubmit(values: z.infer<typeof formSchema>) {
+    const { name, email, password } = values;
+    if (!name || !email || !password) {
+      return;
+    }
 
-    signupUser({ email, password });
+    signupUser({ name, email, password });
+    router.refresh();
+    form.reset();
   }
 
   return (
@@ -47,12 +58,35 @@ function LogIn() {
       <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-8'>
         <FormField
           control={form.control}
+          name='name'
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Name</FormLabel>
+              <FormControl>
+                <Input
+                  type='text'
+                  disabled={isLoading}
+                  placeholder='john doe'
+                  {...field}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
           name='email'
           render={({ field }) => (
             <FormItem>
               <FormLabel>Email</FormLabel>
               <FormControl>
-                <Input placeholder='example@gmail.com' {...field} />
+                <Input
+                  type='email'
+                  disabled={isLoading}
+                  placeholder='example@gmail.com'
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -65,7 +99,12 @@ function LogIn() {
             <FormItem>
               <FormLabel>Password</FormLabel>
               <FormControl>
-                <Input placeholder=''  {...field} />
+                <Input
+                  type='password'
+                  disabled={isLoading}
+                  placeholder=''
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -79,4 +118,4 @@ function LogIn() {
   );
 }
 
-export default LogIn;
+export default SignUp;

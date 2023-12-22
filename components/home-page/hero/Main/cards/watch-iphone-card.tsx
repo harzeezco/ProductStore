@@ -1,3 +1,5 @@
+'use client';
+
 import Button from '@/components/ui/button';
 import PricingFavorite from '@/components/ui/price-fav';
 import Image from 'next/image';

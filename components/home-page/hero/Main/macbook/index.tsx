@@ -1,3 +1,5 @@
+'use client';
+
 import BoxChip from '@/components/ui/box-chip';
 import Button from '@/components/ui/button';
 import PricingFavorite from '@/components/ui/price-fav';

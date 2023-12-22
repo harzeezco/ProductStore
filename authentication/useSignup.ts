@@ -1,4 +1,4 @@
-import signup from '@/services/apiAuth';
+import { signup } from '@/services/apiAuth';
 import { useMutation } from '@tanstack/react-query';
 
 export default function useSignup() {

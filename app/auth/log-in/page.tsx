@@ -15,12 +15,10 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import Button from '@/components/ui/button';
-import useSignup from '@/authentication/useSignup';
+import useLogin from '@/authentication/useLogin';
+import { useRouter } from 'next/navigation';
 
 const formSchema = z.object({
-  name: z.string().min(2, {
-    message: 'Username must be at least 2 characters.',
-  }),
   email: z.string().min(2, {
     message: 'Username must be at least 2 characters.',
   }),
@@ -29,24 +27,23 @@ const formSchema = z.object({
   }),
 });
 
-function SignUp() {
-  const { signupUser, isLoading } = useSignup();
+function LogIn() {
+  const router = useRouter();
+  const { loginUser, isLoading } = useLogin();
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      name: '',
       email: '',
       password: '',
     },
   });
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    const { name, email, password } = values;
-    if (!name || !email || !password) {
-      return;
-    }
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    const { email, password } = values;
 
-    signupUser({ name, email, password });
+    loginUser({ email, password });
+    router.refresh();
+    form.reset();
   }
 
   return (
@@ -54,35 +51,12 @@ function SignUp() {
       <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-8'>
         <FormField
           control={form.control}
-          name='name'
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Name</FormLabel>
-              <FormControl>
-                <Input
-                  type='text'
-                  disabled={isLoading}
-                  placeholder='john doe'
-                  {...field}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
           name='email'
           render={({ field }) => (
             <FormItem>
               <FormLabel>Email</FormLabel>
               <FormControl>
-                <Input
-                  type='email'
-                  disabled={isLoading}
-                  placeholder='example@gmail.com'
-                  {...field}
-                />
+                <Input placeholder='example@gmail.com' {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -95,12 +69,7 @@ function SignUp() {
             <FormItem>
               <FormLabel>Password</FormLabel>
               <FormControl>
-                <Input
-                  type='password'
-                  disabled={isLoading}
-                  placeholder=''
-                  {...field}
-                />
+                <Input placeholder='' {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -114,4 +83,4 @@ function SignUp() {
   );
 }
 
-export default SignUp;
+export default LogIn;
