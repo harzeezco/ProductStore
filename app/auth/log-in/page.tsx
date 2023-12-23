@@ -17,6 +17,7 @@ import { Input } from '@/components/ui/input';
 import Button from '@/components/ui/button';
 import useLogin from '@/authentication/useLogin';
 import { useRouter } from 'next/navigation';
+import useUser from '@/authentication/useUser';
 
 const formSchema = z.object({
   email: z.string().min(2, {
@@ -29,7 +30,12 @@ const formSchema = z.object({
 
 function LogIn() {
   const router = useRouter();
+  const { isAuthenticated } = useUser();
   const { loginUser, isLoading } = useLogin();
+
+  if (isAuthenticated) {
+    router.push('/');
+  }
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),

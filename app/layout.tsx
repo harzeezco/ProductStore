@@ -29,10 +29,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={`${poppins.className} ${inter.variable}`}>
-        <ReactQueryProvider>
-          <Header />
-          {children}
-        </ReactQueryProvider>
+        <ReactQueryProvider>{children}</ReactQueryProvider>
       </body>
     </html>
   );

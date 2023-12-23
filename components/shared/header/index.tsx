@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import useUser from '@/authentication/useUser';
 import Logo from '../logo';
 import GlobalSearch from '../global-search';
 import Nav from './nav';
@@ -7,6 +8,9 @@ import Hamburger from '../hamburger';
 import SideDrawer from '../side-drawer';
 
 function Header() {
+  const { user } = useUser();
+  const userName = user?.user_metadata.name;
+
   return (
     <header className='container-max-w flex items-center justify-between py-6'>
       <div className='flex items-center gap-10'>
@@ -27,6 +31,8 @@ function Header() {
           />
           <Image src='/svg/cart-icon.svg' alt='cart' width={34} height={34} />
           <Hamburger />
+
+          {userName && <h1>{userName}</h1>}
         </div>
       </div>
       <SideDrawer />

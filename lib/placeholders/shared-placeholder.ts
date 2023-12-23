@@ -11,10 +11,6 @@ export const HeaderNavLinks: { label: string; href: string }[] = [
     label: 'About',
     href: '/about',
   },
-  {
-    label: 'Sign Up',
-    href: '/sign-up',
-  },
 ];
 
 export const Home = [];

@@ -51,6 +51,7 @@ function SignUp() {
     signupUser({ name, email, password });
     router.refresh();
     form.reset();
+
   }
 
   return (
