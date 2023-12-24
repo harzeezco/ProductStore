@@ -33,10 +33,6 @@ function LogIn() {
   const { isAuthenticated } = useUser();
   const { loginUser, isLoading } = useLogin();
 
-  if (isAuthenticated) {
-    router.push('/');
-  }
-
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -48,8 +44,11 @@ function LogIn() {
     const { email, password } = values;
 
     loginUser({ email, password });
-    router.refresh();
     form.reset();
+  }
+
+  if (isAuthenticated) {
+    router.push('/');
   }
 
   return (

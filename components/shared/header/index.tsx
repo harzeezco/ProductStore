@@ -6,9 +6,10 @@ import GlobalSearch from '../global-search';
 import Nav from './nav';
 import Hamburger from '../hamburger';
 import SideDrawer from '../side-drawer';
+import Logout from '../log-out';
 
 function Header() {
-  const { user } = useUser();
+  const { user, isAuthenticated } = useUser();
   const userName = user?.user_metadata.name;
 
   return (
@@ -32,7 +33,12 @@ function Header() {
           <Image src='/svg/cart-icon.svg' alt='cart' width={34} height={34} />
           <Hamburger />
 
-          {userName && <h1>{userName}</h1>}
+          {isAuthenticated && (
+            <div>
+              <h1>{userName}</h1>
+              <Logout />
+            </div>
+          )}
         </div>
       </div>
       <SideDrawer />
