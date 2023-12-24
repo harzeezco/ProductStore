@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import useUser from '@/authentication/useUser';
+import User from '@/components/ui/user';
 import Logo from '../logo';
 import GlobalSearch from '../global-search';
 import Nav from './nav';
@@ -33,12 +34,7 @@ function Header() {
           <Image src='/svg/cart-icon.svg' alt='cart' width={34} height={34} />
           <Hamburger />
 
-          {isAuthenticated && (
-            <div>
-              <h1>{userName}</h1>
-              <Logout />
-            </div>
-          )}
+          {isAuthenticated && <User />}
         </div>
       </div>
       <SideDrawer />
