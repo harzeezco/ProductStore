@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import ErrorFallback from '@/components/ui/ErrorFallback';
 import HomeProducts from './home';

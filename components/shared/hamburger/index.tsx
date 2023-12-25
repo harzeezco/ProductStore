@@ -1,10 +1,15 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import cn from '@/lib/utils';
 
-function Hamburger() {
-  const [isOpen, setIsOpen] = useState(false);
+function Hamburger({
+  isOpen,
+  setIsOpen,
+}: {
+  isOpen: boolean;
+  setIsOpen: (isOpen: boolean) => void;
+}) {
   return (
     <button
       type='button'

@@ -1,13 +1,17 @@
 import React from 'react';
 import { HeaderNavLinks } from '@/lib/placeholders/shared-placeholder';
+import cn from '@/lib/utils';
 import Logo from '../logo';
 import NavLink from '../header/link';
 import GlobalSearch from '../global-search';
 
-function SideDrawer() {
+function SideDrawer({ isOpen }: { isOpen: boolean }) {
   return (
     <div
-      className='fixed inset-y-0 -left-full min-h-full rounded-tl-[2rem] bg-gray-100 p-7'
+      className={cn(
+        'fixed inset-y-0  min-h-full rounded-tl-[2rem] bg-gray-100 p-7 transition-all z-50 data-[state=open]:animate-drawer-open data-[state=closed]:animate-drawer-close lg:hidden',
+        isOpen ? 'left-0' : '-left-full',
+      )}
       style={{ border: '0.1rem solid #c0c0c0' }}
     >
       <Logo srcForTextLogo='/png/shared/logo-text.png' hasTextLogo />

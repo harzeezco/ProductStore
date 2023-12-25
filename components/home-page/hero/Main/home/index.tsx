@@ -20,6 +20,7 @@ function HomeProducts({ setActive }: { setActive: (active: string) => void }) {
             alt={product.name}
             width={240}
             height={240}
+            className='transition-all hover:scale-110'
           />
           <p className='text-gradient mt-4 font-poppins text-xl font-medium'>
             {product.name}

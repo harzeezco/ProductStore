@@ -1,4 +1,5 @@
-import React from 'react';
+
+import React, { useState } from 'react';
 import Image from 'next/image';
 import useUser from '@/authentication/useUser';
 import User from '@/components/ui/user';
@@ -7,11 +8,10 @@ import GlobalSearch from '../global-search';
 import Nav from './nav';
 import Hamburger from '../hamburger';
 import SideDrawer from '../side-drawer';
-import Logout from '../log-out';
 
 function Header() {
-  const { user, isAuthenticated } = useUser();
-  const userName = user?.user_metadata.name;
+  const { isAuthenticated } = useUser();
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <header className='container-max-w flex items-center justify-between py-6'>
@@ -32,12 +32,12 @@ function Header() {
             height={30}
           />
           <Image src='/svg/cart-icon.svg' alt='cart' width={34} height={34} />
-          <Hamburger />
+          <Hamburger isOpen={isOpen} setIsOpen={setIsOpen} />
 
           {isAuthenticated && <User />}
         </div>
       </div>
-      <SideDrawer />
+      {isOpen && <SideDrawer isOpen={isOpen} />}
     </header>
   );
 }

@@ -29,16 +29,16 @@ function WatchIphoneCard({
   btnText = 'Buy Now',
 }: WatchIphoneCardProps) {
   const [isHovered, setIsHovered] = useState(false);
-  const hoverImg = isHovered ? animateImg : defaultImg;
+  const appleWatchImg = isHovered ? animateImg : defaultImg;
 
   return (
     <li>
       <Image
-        src={`${imgPath}${img || hoverImg}`}
+        src={`${imgPath}${img || appleWatchImg}`}
         alt={name}
         width={130}
         height={180}
-        className='w-[12rem]'
+        className='w-[12rem] transition-all hover:scale-110'
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       />
