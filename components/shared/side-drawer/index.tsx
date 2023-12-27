@@ -1,33 +1,45 @@
 import React from 'react';
+import { useRouter } from 'next/navigation';
 import { HeaderNavLinks } from '@/lib/placeholders/shared-placeholder';
-import cn from '@/lib/utils';
+import Button from '@/components/ui/button';
+import useUser from '@/authentication/useUser';
 import Logo from '../logo';
 import NavLink from '../header/link';
 import GlobalSearch from '../global-search';
 
-function SideDrawer({ isOpen }: { isOpen: boolean }) {
+function SideDrawer() {
+  const router = useRouter();
+  const { isAuthenticated } = useUser();
+
   return (
     <div
-      className={cn(
-        'fixed inset-y-0  min-h-full rounded-tl-[2rem] bg-gray-100 p-7 transition-all z-50 data-[state=open]:animate-drawer-open data-[state=closed]:animate-drawer-close lg:hidden',
-        isOpen ? 'left-0' : '-left-full',
-      )}
+      className='min-h-screen rounded-tl-[2rem] bg-gray-100 p-7'
       style={{ border: '0.1rem solid #c0c0c0' }}
     >
       <Logo srcForTextLogo='/png/shared/logo-text.png' hasTextLogo />
 
       <nav className='mb-7 mt-10' style={{ borderTop: '0.1rem solid #c0c0c0' }}>
-        <ul className='mt-5 flex flex-col items-center gap-9'>
+        <ul className='mt-5 flex flex-col items-start gap-9'>
           {HeaderNavLinks.map((navlink) => (
             <NavLink key={navlink.href} {...navlink} />
           ))}
         </ul>
       </nav>
 
+      {!isAuthenticated && (
+        <Button
+          className='w-full rounded-md'
+          onClick={() => router.push('/auth/log-in')}
+          variant='primary'
+        >
+          Log In
+        </Button>
+      )}
+
       <GlobalSearch
         width=''
         placeholder='Search for product...'
-        className='rounded-3xl bg-gray-200 pl-3'
+        className='mt-10 rounded-3xl bg-gray-200 pl-3'
       />
     </div>
   );

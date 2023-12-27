@@ -1,15 +1,15 @@
 'use client';
 
-import BoxChip from '@/components/ui/box-chip';
+import React, { useState } from 'react';
+import Image from 'next/image';
 import Button from '@/components/ui/button';
 import PricingFavorite from '@/components/ui/price-fav';
 
 import { MacBookProduct } from '@/lib/placeholders/home/hero-placeholder';
-import Image from 'next/image';
-import React, { useState } from 'react';
 import MacBookColors from './macbook-colors';
+import MacbookTab from './macbook-tab';
 
-const chips = [
+const tabs = [
   {
     id: 1,
     type: 'With M2 chip',
@@ -34,8 +34,8 @@ function MacBookProducts() {
   return (
     <section className='h-full py-7'>
       <div className='flex justify-center'>
-        {chips.map((items) => (
-          <BoxChip
+        {tabs.map((items) => (
+          <MacbookTab
             key={items.id}
             active={active}
             {...items}

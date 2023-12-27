@@ -1,8 +1,8 @@
 'use client';
 
-import Button from '@/components/ui/button';
-import Colors from '@/components/ui/colors';
 import React, { useState } from 'react';
+import Button from '@/components/ui/button';
+import Colors from './colors';
 import ImacCard from '../cards/imac-card';
 
 const Color = [

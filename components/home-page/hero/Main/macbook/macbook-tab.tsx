@@ -1,7 +1,7 @@
 import React from 'react';
 import cn from '@/lib/utils';
 
-type BoxChipProps = {
+type MacbookTabProps = {
   id: number;
   radius: string;
   active: number;
@@ -9,7 +9,7 @@ type BoxChipProps = {
   type: string;
 };
 
-function BoxChip({ id, radius, active, onClick, type }: BoxChipProps) {
+function MacbookTab({ id, radius, active, onClick, type }: MacbookTabProps) {
   return (
     <div
       key={id}
@@ -27,4 +27,4 @@ function BoxChip({ id, radius, active, onClick, type }: BoxChipProps) {
   );
 }
 
-export default BoxChip;
+export default MacbookTab;

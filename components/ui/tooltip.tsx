@@ -3,19 +3,16 @@ import React, { ReactNode } from 'react';
 type TooltipProps = {
   children: ReactNode;
   tooltipText?: string;
-  tooltipClasses?: string;
   style?: {};
 };
 
 function Tooltip({
   children,
   tooltipText,
-  tooltipClasses,
   style,
 }: TooltipProps) {
   return (
-    <button
-      type='button'
+    <div
       className='group relative inline-flex items-center justify-center rounded-lg p-0.5 text-sm font-medium text-gray-900 transition-all hover:text-white focus:outline-none focus:ring-4 focus:ring-primary'
     >
       {children}
@@ -33,7 +30,7 @@ function Tooltip({
           </div>
         </div>
       </div>
-    </button>
+    </div>
   );
 }
 
