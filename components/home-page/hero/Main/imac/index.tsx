@@ -2,10 +2,10 @@
 
 import React, { useState } from 'react';
 import Button from '@/components/elements/button';
-import Colors from './imac-colors';
+import ColorPalette from '@/components/elements/color-palette';
 import ImacCard from '../cards/imac-card';
 
-const colors: { name: string, hexColor: string; }[] = [
+const colors: { name: string; hexColor: string }[] = [
   {
     name: 'green',
     hexColor: '#10505b',
@@ -33,7 +33,7 @@ const colors: { name: string, hexColor: string; }[] = [
 ];
 
 function IMacProducts() {
-  const [active, setActive] = useState('yellow');
+  const [activeColor, setActiveColor] = useState('yellow');
 
   return (
     <section className='relative h-full bg-white'>
@@ -41,10 +41,10 @@ function IMacProducts() {
         Buy Now
       </Button>
       <div className='absolute left-4 top-1/2 -translate-y-1/2'>
-        <Colors colors={colors} setActive={setActive} />
+        <ColorPalette colors={colors} className='flex-col' setActiveColor={setActiveColor} />
       </div>
       <div className='grid h-full grid-cols-2 grid-rows-2 gap-3'>
-        <ImacCard active={active} />
+        <ImacCard active={activeColor} />
       </div>
     </section>
   );

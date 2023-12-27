@@ -6,7 +6,7 @@ import Button from '@/components/elements/button';
 import PricingFavorite from '@/components/elements/product-tag';
 
 import { MacBookProduct } from '@/lib/placeholders/home/hero-placeholder';
-import MacBookColors from './macbook-colors';
+import ColorPalette from '@/components/elements/color-palette';
 import MacbookTab from './macbook-tab';
 
 const tabs = [
@@ -23,12 +23,16 @@ const tabs = [
 ];
 
 function MacBookProducts() {
-  const [active, setActive] = useState(1);
-  const [color, setColor] = useState(0);
+  const [activeTab, setActiveTab] = useState(1);
+  const [activeColor, setActiveColor] = useState(0);
 
   function handleClick(id: number) {
-    setActive(id);
-    setColor(id);
+    setActiveTab(id);
+    setActiveColor(id);
+  }
+
+  function handleActiveColor(id: number) {
+    setActiveColor(id);
   }
 
   return (
@@ -37,7 +41,7 @@ function MacBookProducts() {
         {tabs.map((items) => (
           <MacbookTab
             key={items.id}
-            active={active}
+            active={activeTab}
             {...items}
             onClick={handleClick}
           />
@@ -46,7 +50,7 @@ function MacBookProducts() {
 
       <div className='mt-4 flex justify-center'>
         {MacBookProduct.filter(
-          (product) => product.id === active,
+          (product) => product.id === activeTab,
         ).map(
           ({
             img,
@@ -62,7 +66,7 @@ function MacBookProducts() {
               className='flex flex-col items-center max-md:px-6'
             >
               <Image
-                src={`/png/home-assets/hero-assets/${img[color]}`}
+                src={`/png/home-assets/hero-assets/${img[activeColor]}`}
                 alt=''
                 width={240}
                 height={370}
@@ -76,9 +80,11 @@ function MacBookProducts() {
                 />
                 <div className='flex w-fit items-center gap-2'>
                   <span className='font-medium'>Colors:</span>
-                  <MacBookColors
+                  <ColorPalette
                     colors={colors}
-                    setColor={setColor}
+                    setActiveColor={handleActiveColor}
+                    className='flex-row'
+                    tooltip={{ position: 'top', pointer: 'top' }}
                   />
                 </div>
                 <ul className='my-4 flex flex-col'>
