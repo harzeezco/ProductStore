@@ -1,34 +1,34 @@
 'use client';
 
 import React, { useState } from 'react';
-import Button from '@/components/ui/button';
-import Colors from './colors';
+import Button from '@/components/elements/button';
+import Colors from './imac-colors';
 import ImacCard from '../cards/imac-card';
 
-const Color = [
+const colors: { name: string, hexColor: string; }[] = [
   {
-    type: 'green',
-    color: '#10505b',
+    name: 'green',
+    hexColor: '#10505b',
   },
   {
-    type: 'yellow',
-    color: '#d48207',
+    name: 'yellow',
+    hexColor: '#d48207',
   },
   {
-    type: 'orange',
-    color: '#e36942',
+    name: 'orange',
+    hexColor: '#e36942',
   },
   {
-    type: 'pink',
-    color: '#b72c31',
+    name: 'pink',
+    hexColor: '#b72c31',
   },
   {
-    type: 'purple',
-    color: '#353a71',
+    name: 'purple',
+    hexColor: '#353a71',
   },
   {
-    type: 'silver',
-    color: '#c7c8ca',
+    name: 'silver',
+    hexColor: '#c7c8ca',
   },
 ];
 
@@ -41,7 +41,7 @@ function IMacProducts() {
         Buy Now
       </Button>
       <div className='absolute left-4 top-1/2 -translate-y-1/2'>
-        <Colors colors={Color} setActive={setActive} />
+        <Colors colors={colors} setActive={setActive} />
       </div>
       <div className='grid h-full grid-cols-2 grid-rows-2 gap-3'>
         <ImacCard active={active} />

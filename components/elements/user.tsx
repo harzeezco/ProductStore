@@ -6,8 +6,14 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
-import { User, ShoppingBag, XCircle, Star, LogOut } from 'lucide-react';
+} from '@/components/elements/dropdown-menu';
+import {
+  User,
+  ShoppingBag,
+  XCircle,
+  Star,
+  LogOut,
+} from 'lucide-react';
 
 const user = [
   {
@@ -58,7 +64,11 @@ function UserIcon() {
             asChild
           >
             {label === 'Logout' ? (
-              <button type='button' className='w-full' onClick={logout}>
+              <button
+                type='button'
+                className='w-full'
+                onClick={logout}
+              >
                 <Icon />
                 <span>Logout</span>
               </button>

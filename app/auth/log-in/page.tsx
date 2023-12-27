@@ -12,9 +12,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
-import Button from '@/components/ui/button';
+} from '@/components/elements/form';
+import { Input } from '@/components/elements/input';
+import Button from '@/components/elements/button';
 import useLogin from '@/authentication/useLogin';
 import { useRouter } from 'next/navigation';
 import useUser from '@/authentication/useUser';
@@ -53,7 +53,10 @@ function LogIn() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-8'>
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className='space-y-8'
+      >
         <FormField
           control={form.control}
           name='email'

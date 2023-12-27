@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRouter } from 'next/navigation';
 import { HeaderNavLinks } from '@/lib/placeholders/shared-placeholder';
-import Button from '@/components/ui/button';
+import Button from '@/components/elements/button';
 import useUser from '@/authentication/useUser';
 import Logo from '../logo';
 import NavLink from '../header/link';
@@ -18,7 +18,10 @@ function SideDrawer() {
     >
       <Logo srcForTextLogo='/png/shared/logo-text.png' hasTextLogo />
 
-      <nav className='mb-7 mt-10' style={{ borderTop: '0.1rem solid #c0c0c0' }}>
+      <nav
+        className='mb-7 mt-10'
+        style={{ borderTop: '0.1rem solid #c0c0c0' }}
+      >
         <ul className='mt-5 flex flex-col items-start gap-9'>
           {HeaderNavLinks.map((navlink) => (
             <NavLink key={navlink.href} {...navlink} />

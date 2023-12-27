@@ -9,7 +9,10 @@ function ImacCard({ active }: { active: string }) {
       {iMacProducts[active].map((product) => (
         <div
           className='grid place-items-center bg-gray-50 p-6'
-          style={{ gridColumn: product.gridCol, gridRow: product.gridRow }}
+          style={{
+            gridColumn: product.gridCol,
+            gridRow: product.gridRow,
+          }}
         >
           <Image
             src={`/png/home-assets/hero-assets/imac/${product.img}`}

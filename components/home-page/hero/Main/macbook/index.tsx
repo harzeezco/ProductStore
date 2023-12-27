@@ -2,8 +2,8 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import Button from '@/components/ui/button';
-import PricingFavorite from '@/components/ui/price-fav';
+import Button from '@/components/elements/button';
+import PricingFavorite from '@/components/elements/product-tag';
 
 import { MacBookProduct } from '@/lib/placeholders/home/hero-placeholder';
 import MacBookColors from './macbook-colors';
@@ -45,9 +45,22 @@ function MacBookProducts() {
       </div>
 
       <div className='mt-4 flex justify-center'>
-        {MacBookProduct.filter((product) => product.id === active).map(
-          ({ img, name, id, discount, colors, price, description }) => (
-            <div key={id} className='flex flex-col items-center max-md:px-6'>
+        {MacBookProduct.filter(
+          (product) => product.id === active,
+        ).map(
+          ({
+            img,
+            name,
+            id,
+            discount,
+            colors,
+            price,
+            description,
+          }) => (
+            <div
+              key={id}
+              className='flex flex-col items-center max-md:px-6'
+            >
               <Image
                 src={`/png/home-assets/hero-assets/${img[color]}`}
                 alt=''
@@ -63,7 +76,10 @@ function MacBookProducts() {
                 />
                 <div className='flex w-fit items-center gap-2'>
                   <span className='font-medium'>Colors:</span>
-                  <MacBookColors colors={colors} setColor={setColor} />
+                  <MacBookColors
+                    colors={colors}
+                    setColor={setColor}
+                  />
                 </div>
                 <ul className='my-4 flex flex-col'>
                   {description.map((list) => (

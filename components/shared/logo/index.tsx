@@ -14,7 +14,12 @@ function Logo({
 }) {
   return (
     <Link href='/' className='flex items-center gap-3'>
-      <Image src={srcForSymbolLogo} alt='logo symbol' width={44} height={44} />
+      <Image
+        src={srcForSymbolLogo}
+        alt='logo symbol'
+        width={44}
+        height={44}
+      />
       <Image
         src={srcForTextLogo}
         alt='logo text'

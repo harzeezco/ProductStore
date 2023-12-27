@@ -9,7 +9,13 @@ type MacbookTabProps = {
   type: string;
 };
 
-function MacbookTab({ id, radius, active, onClick, type }: MacbookTabProps) {
+function MacbookTab({
+  id,
+  radius,
+  active,
+  onClick,
+  type,
+}: MacbookTabProps) {
   return (
     <div
       key={id}

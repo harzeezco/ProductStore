@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import cn from '@/lib/utils';
 
-function PricingFavorite({
+function ProductTag({
   discount,
   price,
   className = '',
@@ -12,12 +12,17 @@ function PricingFavorite({
   className: string;
 }) {
   return (
-    <div className={cn('flex items-center justify-between', className)}>
+    <div
+      className={cn('flex items-center justify-between', className)}
+    >
       <div className='flex gap-1.5'>
         <span className='text-lg font-semibold text-primary'>{`$${discount}`}</span>
         <span className='text-base font-medium text-gray-300 line-through'>{`$${price}`}</span>
       </div>
-      <button type='button' className='border-[1.5px] border-gray-100 p-1'>
+      <button
+        type='button'
+        className='border-[1.5px] border-gray-100 p-1'
+      >
         <Image
           src='/svg/favorite-icon.svg'
           alt='favorite'
@@ -29,4 +34,4 @@ function PricingFavorite({
   );
 }
 
-export default PricingFavorite;
+export default ProductTag;

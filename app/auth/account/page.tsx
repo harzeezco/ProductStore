@@ -6,7 +6,11 @@ import {
   createClientComponentClient,
 } from '@supabase/auth-helpers-nextjs';
 
-export default function AccountForm({ session }: { session: Session | null }) {
+export default function AccountForm({
+  session,
+}: {
+  session: Session | null;
+}) {
   const supabase = createClientComponentClient();
   const [loading, setLoading] = useState(true);
   const [fullname, setFullname] = useState<string | null>(null);
@@ -80,7 +84,12 @@ export default function AccountForm({ session }: { session: Session | null }) {
     <div className='form-widget'>
       <div>
         <label htmlFor='email'>Email</label>
-        <input id='email' type='text' value={session?.user.email} disabled />
+        <input
+          id='email'
+          type='text'
+          value={session?.user.email}
+          disabled
+        />
       </div>
       <div>
         <label htmlFor='fullName'>Full Name</label>

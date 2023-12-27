@@ -2,7 +2,11 @@ import React from 'react';
 import { homeProducts } from '@/lib/placeholders/home/hero-placeholder';
 import Image from 'next/image';
 
-function HomeProducts({ setActive }: { setActive: (active: string) => void }) {
+function HomeProducts({
+  setActive,
+}: {
+  setActive: (active: string) => void;
+}) {
   return (
     <section className='grid grid-rows-2 gap-3 overflow-hidden bg-gray-150 sm:grid-cols-2'>
       {homeProducts.map((product) => (

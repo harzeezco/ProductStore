@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import { Input } from '@/components/ui/input';
+import { Input } from '@/components/elements/input';
 import cn from '@/lib/utils';
 
 function GlobalSearch({
@@ -13,7 +13,13 @@ function GlobalSearch({
   className?: string;
 }) {
   return (
-    <div className={cn('relative rounded-sm bg-gray-100', width, className)}>
+    <div
+      className={cn(
+        'relative rounded-sm bg-gray-100',
+        width,
+        className,
+      )}
+    >
       <Input
         placeholder={placeholder}
         className='border-none pl-3 outline-none placeholder:text-gray-300'

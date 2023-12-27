@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { Transition } from '@headlessui/react';
 import useUser from '@/authentication/useUser';
-import User from '@/components/ui/user';
-import Button from '@/components/ui/button';
+import User from '@/components/elements/user';
+import Button from '@/components/elements/button';
 import { useRouter } from 'next/navigation';
 import Logo from '../logo';
 import GlobalSearch from '../global-search';
@@ -49,7 +49,12 @@ function Header() {
             width={30}
             height={30}
           />
-          <Image src='/svg/cart-icon.svg' alt='cart' width={34} height={34} />
+          <Image
+            src='/svg/cart-icon.svg'
+            alt='cart'
+            width={34}
+            height={34}
+          />
 
           {isAuthenticated ? (
             <User />

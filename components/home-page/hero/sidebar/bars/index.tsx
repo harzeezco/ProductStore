@@ -26,12 +26,21 @@ function Bars({
         style={{ marginBlock: '.3rem' }}
         onClick={() => setActive(label)}
       >
-        <Image src={`/svg/${icon}`} alt={label} width={24} height={24} />
+        <Image
+          src={`/svg/${icon}`}
+          alt={label}
+          width={24}
+          height={24}
+        />
         <p className='grow justify-self-start text-gray-500 max-md:hidden'>
           {label}
         </p>
         <Image
-          src={active === label ? '/svg/folder-open.svg' : '/svg/folder.svg'}
+          src={
+            active === label
+              ? '/svg/folder-open.svg'
+              : '/svg/folder.svg'
+          }
           alt='folder'
           width={24}
           height={24}

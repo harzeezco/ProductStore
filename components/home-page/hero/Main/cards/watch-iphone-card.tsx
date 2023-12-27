@@ -1,7 +1,7 @@
 'use client';
 
-import Button from '@/components/ui/button';
-import PricingFavorite from '@/components/ui/price-fav';
+import Button from '@/components/elements/button';
+import PricingFavorite from '@/components/elements/product-tag';
 import Image from 'next/image';
 import React, { useState } from 'react';
 
@@ -45,10 +45,12 @@ function WatchIphoneCard({
       <div className='mt-5 flex flex-col pl-3'>
         <h3 className='text-lg font-semibold'>{name}</h3>
         <span className='text-base text-gray-600'>{description}</span>
-        <PricingFavorite discount={discount} price={price} className='my-3' />
-        <Button onClick={() => {}} variant='primary'>
-          {btnText}
-        </Button>
+        <PricingFavorite
+          discount={discount}
+          price={price}
+          className='my-3'
+        />
+        <Button onClick={() => {}}>{btnText}</Button>
       </div>
     </li>
   );

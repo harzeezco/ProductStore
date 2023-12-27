@@ -1,19 +1,8 @@
 import React from 'react';
 import type { Metadata } from 'next';
-import { Inter, Poppins } from 'next/font/google';
 import './styles/globals.css';
 import ReactQueryProvider from '@/lib/providers/react-query.provider';
-
-const inter = Inter({
-  subsets: ['latin'],
-  weight: ['500', '600', '700'],
-  variable: '--font--inter',
-});
-const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font--poppins',
-});
+import { inter, poppins } from './font';
 
 export const metadata: Metadata = {
   title: 'Create Next App',

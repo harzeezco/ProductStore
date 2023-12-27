@@ -1,5 +1,5 @@
 import React from 'react';
-import ErrorFallback from '@/components/ui/ErrorFallback';
+import ErrorFallback from '@/components/elements/ErrorFallback';
 import HomeProducts from './home';
 import IPhoneProducts from './iphone';
 import MacBookProducts from './macbook';
