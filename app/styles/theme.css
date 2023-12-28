@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer utilities {
-   .h1-semibold {
-      @apply font-semibold text-4xl font-inter text-black/80
-   }
+  .h1-semibold {
+    @apply font-semibold text-4xl font-inter text-black/80;
+  }
 }

@@ -1,4 +1,4 @@
-import cn from '@/lib/utils';
+import { cn } from '@/lib/utils';
 import React from 'react';
 
 function FeaturedTitle({
@@ -11,9 +11,7 @@ function FeaturedTitle({
   return (
     <div className={cn('flex items-center gap-3 mb-5', className)}>
       <div className='h-8 w-4 rounded-sm bg-primary' />
-      <p className='font-semibold text-primary'>
-        {title}
-      </p>
+      <p className='font-semibold text-primary'>{title}</p>
     </div>
   );
 }
