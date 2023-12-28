@@ -16,7 +16,7 @@ export default function useLogin() {
     },
     onError: () => {
       toast.error('Provided email or password are incorrect');
-    }
+    },
   });
 
   return { loginUser, isLoading };

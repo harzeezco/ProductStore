@@ -8,7 +8,7 @@ function Hero() {
   const [active, setActive] = useState('Home');
 
   return (
-    <section className='container-max-w grid place-items-center'>
+    <section className='container-max-w mb-20 grid place-items-center'>
       <div
         className='custom-scrollbar relative grid h-[80vh] min-h-[70vh] w-[85vw] min-w-[80vw] max-w-[90vw] resize-x grid-cols-[auto_1fr] overflow-auto rounded-[2rem]'
         style={{

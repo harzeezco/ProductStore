@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+   .h1-semibold {
+      @apply font-semibold text-4xl font-inter text-black/80
+   }
+}
