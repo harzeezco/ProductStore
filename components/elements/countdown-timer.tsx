@@ -11,15 +11,15 @@ function CountdownTimer() {
 
   return (
     <ul className='flex gap-5'>
-      {getCountDown.map(({ type, formatter, hasEntity }) => (
-        <li className='flex items-center gap-4'>
+      {getCountDown.map(({ type, formatter, hasColon }) => (
+        <li className='flex items-center gap-4' key={type}>
           <div className='flex flex-col items-center'>
             <small className='font-medium'>{type}</small>
             <p className='font-inter text-[32px] font-bold tracking-widest'>
               {formatter}
             </p>
           </div>
-          {hasEntity && (
+          {hasColon && (
             <span className='text-xl font-bold text-primary'>:</span>
           )}
         </li>

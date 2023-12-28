@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils';
 import { Input } from '@/components/forms/input';
 
 function GlobalSearch({
-  placeholder = '',
+  placeholder = 'What are you looking for?',
   width = '',
   className = '',
 }: {
@@ -35,10 +35,5 @@ function GlobalSearch({
     </div>
   );
 }
-
-GlobalSearch.defaultProps = {
-  placeholder: 'What are you looking for?',
-  className: '',
-};
 
 export default GlobalSearch;

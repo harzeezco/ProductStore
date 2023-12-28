@@ -9,31 +9,31 @@ export function formatCountdownTime(value: number) {
   return value < 10 ? `0${value}` : value;
 }
 
-export function countDownData(countDown: any): Array<{
+export function countDownData(countDown): Array<{
   type: string;
-  formatter: (countDown: any) => void;
-  hasEntity: boolean;
+  formatter: string;
+  hasColon: boolean;
 }> {
   return [
     {
       type: 'Days',
-      formatter: formatCountdownTime(countDown.days()),
-      hasEntity: true,
+      formatter: formatCountdownTime(countDown.days()) as string,
+      hasColon: true,
     },
     {
       type: 'Hours',
-      formatter: formatCountdownTime(countDown.hours()),
-      hasEntity: true,
+      formatter: formatCountdownTime(countDown.hours()) as string,
+      hasColon: true,
     },
     {
       type: 'Minutes',
-      formatter: formatCountdownTime(countDown.minutes()),
-      hasEntity: true,
+      formatter: formatCountdownTime(countDown.minutes()) as string,
+      hasColon: true,
     },
     {
       type: 'Seconds',
-      formatter: formatCountdownTime(countDown.seconds()),
-      hasEntity: false,
+      formatter: formatCountdownTime(countDown.seconds()) as string,
+      hasColon: false,
     },
   ];
 }
