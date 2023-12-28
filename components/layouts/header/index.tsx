@@ -5,11 +5,11 @@ import useUser from '@/authentication/useUser';
 import User from '@/components/elements/user';
 import Button from '@/components/elements/button';
 import { useRouter } from 'next/navigation';
-import Logo from '../logo';
-import GlobalSearch from '../global-search';
+import Logo from '@/components/elements/logo';
+import GlobalSearch from '@/components/shared/global-search';
+import Hamburger from '@/components/elements/hamburger';
+import SideDrawer from '../../elements/drawer';
 import Nav from './nav';
-import Hamburger from '../hamburger';
-import SideDrawer from '../side-drawer';
 
 function Header() {
   const { isAuthenticated } = useUser();

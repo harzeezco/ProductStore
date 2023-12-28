@@ -2,7 +2,7 @@ import cn from '@/lib/utils';
 import React, { ReactNode } from 'react';
 
 const positions = {
-  top: '-top-full -translate-y-1/2 -left-1/2 flex-col',
+  top: '-top-full -translate-y-1/2 -left-1/2 -translate-x-2 flex-col',
   bottom: '',
   right: '',
   left: '-translate-y-1/2 left-full top-1/2',
@@ -35,7 +35,7 @@ function Tooltip({
   return (
     <div
       className={cn(
-        'group relative inline-flex items-center justify-center rounded-lg p-0.5 text-sm font-medium transition-all hover:text-white focus:outline-none focus:ring-4 focus:ring-primary',
+        'group relative inline-flex items-center justify-center rounded-lg p-0.5 text-sm font-medium transition-all hover:text-white focus:outline-none focus:ring-4 focus:ring-primary w-fit',
         className,
       )}
     >
@@ -48,7 +48,7 @@ function Tooltip({
           )}
         >
           <span
-            className={cn('h-6 w-4', pointers[pointer])}
+            className={cn('h-5 w-4', pointers[pointer])}
             style={{
               clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)',
               background,

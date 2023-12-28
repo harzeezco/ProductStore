@@ -41,7 +41,11 @@ function IMacProducts() {
         Buy Now
       </Button>
       <div className='absolute left-4 top-1/2 -translate-y-1/2'>
-        <ColorPalette colors={colors} className='flex-col' setActiveColor={setActiveColor} />
+        <ColorPalette
+          colors={colors}
+          className='flex-col'
+          setActiveColor={setActiveColor}
+        />
       </div>
       <div className='grid h-full grid-cols-2 grid-rows-2 gap-3'>
         <ImacCard active={activeColor} />

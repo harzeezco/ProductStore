@@ -4,27 +4,40 @@ import Tooltip from './tooltip';
 
 function ColorPalette({
   colors,
-  setActiveColor,
   className = '',
   tooltip = {},
+  setActiveColor,
+  setActiveMacColor,
 }: {
   colors: { name: string; hexColor: string }[];
-  setActiveColor: (id: any) => void;
+  setActiveColor?: (name: string) => void;
+  setActiveMacColor?: (id: number) => void;
   className: string;
   tooltip?: {};
 }) {
+  function handleClick(name: string, idx: number) {
+    if (setActiveColor) {
+      setActiveColor!(name);
+    }
+
+    if (setActiveMacColor) {
+      setActiveMacColor!(idx);
+    }
+  }
+
   return (
     <div className={cn('flex gap-2', className)}>
       {colors.map(({ name, hexColor }, idx) => (
         <Tooltip
+          key={name}
           background={hexColor}
           tooltipText={name}
           {...tooltip}
         >
           <button
             type='button'
-            aria-label='color'
-            onClick={() => setActiveColor(idx)}
+            aria-label={`${name} color`}
+            onClick={() => handleClick(name, idx)}
             className='rounded-full p-3 transition-[1s] duration-75 ease-in'
             style={{ backgroundColor: hexColor }}
           />

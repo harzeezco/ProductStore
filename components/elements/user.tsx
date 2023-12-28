@@ -57,15 +57,15 @@ function UserIcon() {
           <User className='text-white' />
         </button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className='mr-6 grid gap-1 bg-black/60'>
+      <DropdownMenuContent className='mr-6 grid gap-1 bg-gray-100'>
         {user.map(({ Icon, label, href }) => (
           <DropdownMenuItem
-            className='flex cursor-pointer items-center gap-2 px-3 text-gray-50 hover:!bg-primary hover:!text-gray-50 focus:!bg-primary focus:!text-gray-50'
+            className='flex cursor-pointer items-center gap-2 px-3 text-gray-400 hover:!bg-primary hover:!text-gray-50 focus:!bg-primary focus:!text-gray-50'
             asChild
           >
             {label === 'Logout' ? (
               <button
-                type='button'
+                type='submit'
                 className='w-full'
                 onClick={logout}
               >

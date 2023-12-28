@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
-import { Input } from '@/components/elements/input';
 import cn from '@/lib/utils';
+import { Input } from '@/components/forms/input';
 
 function GlobalSearch({
   placeholder = '',

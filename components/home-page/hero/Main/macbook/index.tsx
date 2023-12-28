@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Button from '@/components/elements/button';
-import PricingFavorite from '@/components/elements/product-tag';
+import ProductTag from '@/components/elements/product-tag';
 
 import { MacBookProduct } from '@/lib/placeholders/home/hero-placeholder';
 import ColorPalette from '@/components/elements/color-palette';
@@ -28,10 +28,6 @@ function MacBookProducts() {
 
   function handleClick(id: number) {
     setActiveTab(id);
-    setActiveColor(id);
-  }
-
-  function handleActiveColor(id: number) {
     setActiveColor(id);
   }
 
@@ -73,7 +69,7 @@ function MacBookProducts() {
               />
               <div className='flex flex-col'>
                 <h1 className='text-2xl font-semibold'>{name}</h1>
-                <PricingFavorite
+                <ProductTag
                   discount={discount}
                   price={price}
                   className='mb-2 mt-1'
@@ -82,9 +78,9 @@ function MacBookProducts() {
                   <span className='font-medium'>Colors:</span>
                   <ColorPalette
                     colors={colors}
-                    setActiveColor={handleActiveColor}
                     className='flex-row'
                     tooltip={{ position: 'top', pointer: 'top' }}
+                    setActiveMacColor={setActiveColor}
                   />
                 </div>
                 <ul className='my-4 flex flex-col'>

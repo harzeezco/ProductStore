@@ -5,7 +5,7 @@ import {
   QueryClient,
   QueryClientProvider,
 } from '@tanstack/react-query';
-import Header from '@/components/shared/header';
+import Header from '@/components/layouts/header';
 
 const queryClient = new QueryClient({
   defaultOptions: {

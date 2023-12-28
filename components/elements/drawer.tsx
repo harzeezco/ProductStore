@@ -3,9 +3,9 @@ import { useRouter } from 'next/navigation';
 import { HeaderNavLinks } from '@/lib/placeholders/shared-placeholder';
 import Button from '@/components/elements/button';
 import useUser from '@/authentication/useUser';
-import Logo from '../logo';
-import NavLink from '../header/link';
-import GlobalSearch from '../global-search';
+import GlobalSearch from '../shared/global-search';
+import Logo from './logo';
+import NavLink from '../layouts/header/link';
 
 function SideDrawer() {
   const router = useRouter();

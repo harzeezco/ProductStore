@@ -20,7 +20,6 @@ type ButtonType = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: keyof typeof Variants;
   size?: keyof typeof sizes;
   className?: string;
-  onClick: () => void;
 };
 
 function Button({

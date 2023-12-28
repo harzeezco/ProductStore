@@ -12,8 +12,8 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@/components/elements/form';
-import { Input } from '@/components/elements/input';
+} from '@/components/forms/form';
+import { Input } from '@/components/forms/input';
 import Button from '@/components/elements/button';
 import useLogin from '@/authentication/useLogin';
 import { useRouter } from 'next/navigation';
@@ -83,7 +83,7 @@ function LogIn() {
             </FormItem>
           )}
         />
-        <Button onClick={onSubmit} variant='submit'>
+        <Button type='submit'>
           Submit
         </Button>
       </form>
