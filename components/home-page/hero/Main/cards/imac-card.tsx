@@ -1,6 +1,6 @@
-import { iMacProducts } from '@/lib/placeholders/home/hero-placeholder';
-import Image from 'next/image';
 import React from 'react';
+import NextImage from '@/components/elements/next-image';
+import { iMacProducts } from '@/lib/placeholders/home/hero-placeholder';
 
 function ImacCard({ active }: { active: string }) {
   return (
@@ -14,7 +14,7 @@ function ImacCard({ active }: { active: string }) {
             gridRow: product.gridRow,
           }}
         >
-          <Image
+          <NextImage
             src={`/png/home-assets/hero-assets/imac/${product.img}`}
             alt={product.alt}
             width={240}

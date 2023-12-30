@@ -1,12 +1,12 @@
 'use client';
 
 import React, { useState } from 'react';
-import Image from 'next/image';
 import Button from '@/components/elements/button';
 import ProductTag from '@/components/elements/product-tag';
 
 import { MacBookProduct } from '@/lib/placeholders/home/hero-placeholder';
 import ColorPalette from '@/components/elements/color-palette';
+import NextImage from '@/components/elements/next-image';
 import MacbookTab from './macbook-tab';
 
 const tabs = [
@@ -61,7 +61,7 @@ function MacBookProducts() {
               key={id}
               className='flex flex-col items-center max-md:px-6'
             >
-              <Image
+              <NextImage
                 src={`/png/home-assets/hero-assets/${img[activeColor]}`}
                 alt=''
                 width={240}

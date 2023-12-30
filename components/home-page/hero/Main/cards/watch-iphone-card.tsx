@@ -1,9 +1,9 @@
 'use client';
 
 import Button from '@/components/elements/button';
-import PricingFavorite from '@/components/elements/product-tag';
-import Image from 'next/image';
 import React, { useState } from 'react';
+import NextImage from '@/components/elements/next-image';
+import PricingFavorite from '@/components/elements/product-tag';
 
 type WatchIphoneCardProps = {
   img?: string;
@@ -33,7 +33,7 @@ function WatchIphoneCard({
 
   return (
     <li>
-      <Image
+      <NextImage
         src={`${imgPath}${img || appleWatchImg}`}
         alt={name}
         width={130}

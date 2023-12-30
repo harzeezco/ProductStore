@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { cn } from '@/lib/utils';
+import NextImage from './next-image';
 
 function Logo({
   srcForSymbolLogo = '/png/shared-assets/logo-symbol.png',
@@ -14,13 +14,13 @@ function Logo({
 }) {
   return (
     <Link href='/' className='flex items-center gap-3'>
-      <Image
+      <NextImage
         src={srcForSymbolLogo}
         alt='logo symbol'
         width={44}
         height={44}
       />
-      <Image
+      <NextImage
         src={srcForTextLogo}
         alt='logo text'
         width={144}

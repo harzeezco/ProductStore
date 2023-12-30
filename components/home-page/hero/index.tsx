@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Container from '@/components/elements/container';
 import Sidebar from './sidebar';
 import Main from './Main';
 
@@ -8,7 +9,7 @@ function Hero() {
   const [active, setActive] = useState('Home');
 
   return (
-    <section className='container-max-w mb-20 grid place-items-center'>
+    <Container as='section' className='mb-20 grid place-items-center'>
       <div
         className='custom-scrollbar relative grid h-[80vh] min-h-[70vh] w-[85vw] min-w-[80vw] max-w-[90vw] resize-x grid-cols-[auto_1fr] overflow-auto rounded-[2rem]'
         style={{
@@ -19,7 +20,7 @@ function Hero() {
         <Sidebar setActive={setActive} active={active} />
         <Main setActive={setActive} active={active} />
       </div>
-    </section>
+    </Container>
   );
 }
 

@@ -1,6 +1,6 @@
 import React from 'react';
+import NextImage from '@/components/elements/next-image';
 import { SideLinks } from '@/lib/placeholders/home/hero-placeholder';
-import Image from 'next/image';
 import Bars from './bars';
 
 function Sidebar({
@@ -12,7 +12,7 @@ function Sidebar({
 }) {
   return (
     <aside className='sticky inset-y-0 left-0 grid h-[79.5vh] place-items-center bg-gray-100'>
-      <Image
+      <NextImage
         src='/png/home-assets/hero-assets/sale-shape.png'
         alt='get up to 50% off now'
         width={120}

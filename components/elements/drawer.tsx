@@ -5,7 +5,7 @@ import Button from '@/components/elements/button';
 import useUser from '@/authentication/useUser';
 import GlobalSearch from '../shared/global-search';
 import Logo from './logo';
-import NavLink from '../layouts/header/link';
+import NextLink from './next-link';
 
 function SideDrawer() {
   const router = useRouter();
@@ -24,7 +24,9 @@ function SideDrawer() {
       >
         <ul className='mt-5 flex flex-col items-start gap-9'>
           {HeaderNavLinks.map((navlink) => (
-            <NavLink key={navlink.href} {...navlink} />
+            <li key={navlink.href}>
+              <NextLink {...navlink}>{navlink.label}</NextLink>
+            </li>
           ))}
         </ul>
       </nav>

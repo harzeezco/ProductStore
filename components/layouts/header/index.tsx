@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
-import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import { Transition } from '@headlessui/react';
 import useUser from '@/authentication/useUser';
 import User from '@/components/elements/user';
 import Button from '@/components/elements/button';
-import { useRouter } from 'next/navigation';
 import Logo from '@/components/elements/logo';
 import GlobalSearch from '@/components/shared/global-search';
+import NextImage from '@/components/elements/next-image';
 import Hamburger from '@/components/elements/hamburger';
+import Container from '@/components/elements/container';
 import SideDrawer from '../../elements/drawer';
 import Nav from './nav';
 
@@ -17,7 +18,7 @@ function Header() {
   const router = useRouter();
 
   return (
-    <header className='container-max-w flex items-center justify-between py-6'>
+    <Container as='header' className='flex items-center justify-between py-6'>
       <div className='flex items-center  gap-10'>
         <Logo
           srcForTextLogo='/png/shared-assets/logo-text.png'
@@ -43,13 +44,13 @@ function Header() {
       <div className='flex items-center gap-10'>
         <GlobalSearch width='w-[300px]' className='max-md:hidden' />
         <div className='flex items-center gap-5'>
-          <Image
+          <NextImage
             src='/svg/favorite-icon.svg'
             alt='favorite'
             width={30}
             height={30}
           />
-          <Image
+          <NextImage
             src='/svg/cart-icon.svg'
             alt='cart'
             width={34}
@@ -71,7 +72,7 @@ function Header() {
           <Hamburger isOpen={isOpen} setIsOpen={setIsOpen} />
         </div>
       </div>
-    </header>
+    </Container>
   );
 }
 

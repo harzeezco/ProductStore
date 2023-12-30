@@ -1,6 +1,6 @@
 import React from 'react';
 import { homeProducts } from '@/lib/placeholders/home/hero-placeholder';
-import Image from 'next/image';
+import NextImage from '@/components/elements/next-image';
 
 function HomeProducts({
   setActive,
@@ -19,14 +19,14 @@ function HomeProducts({
           role='button'
           tabIndex={-1}
         >
-          <Image
+          <NextImage
             src={`/png/home-assets/hero-assets/${product.img}`}
             alt={product.name}
             width={240}
             height={240}
             className='transition-all hover:scale-110'
           />
-          <p className='text-gradient mt-4 font-poppins text-xl font-medium'>
+          <p className='text-gradient font-poppins mt-4 text-xl font-medium'>
             {product.name}
           </p>
         </div>
