@@ -1,6 +1,6 @@
 import React from 'react';
-import Hero from '@/components/home-page/hero';
-import FlashSalesProducts from '@/components/home-page/flash-sales-products';
+import Hero from '@/client/pages/home/sections/hero';
+import FlashSalesProducts from '@/client/pages/home/sections/flash-sales-products';
 
 function Home() {
   return (

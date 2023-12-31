@@ -1,8 +1,8 @@
 import React from 'react';
+import ReactQueryProvider from '@/client/providers/react-query.provider';
 import type { Metadata } from 'next';
-import './styles/globals.css';
-import ReactQueryProvider from '@/providers/react-query.provider';
 import { inter, poppins } from './font';
+import './styles/globals.css';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en'>
+    <html lang='en' className='bg'>
       <body className={`${poppins.className} ${inter.variable}`}>
         <ReactQueryProvider>{children}</ReactQueryProvider>
       </body>
