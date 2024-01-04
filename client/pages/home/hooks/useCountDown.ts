@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 import moment from 'moment';
-import useLocalStorage from '../../../../hooks/useLocalStorage';
+import useLocalStorage from '@/client/hooks/useLocalStorage';
 
 function useCountDown(countDownKey = 'flashSaleCountdown') {
   const [countDown, setCountDown] = useLocalStorage(

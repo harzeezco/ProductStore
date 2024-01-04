@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import { countDownData } from '@/lib/utils';
 import useCountDown from '../../hooks/useCountDown';
+import { countDownData } from '../../lib/utils';
 
 function CountdownTimer() {
   const { countDown } = useCountDown();
