@@ -9,7 +9,7 @@ function FlashSalesProducts() {
     <Container as='section' className=''>
       <FeaturedTitle title='Today’s' />
 
-      <div className='flex items-center gap-14'>
+      <div className='flex max-sm:flex-col md:items-center gap-x-14 gap-y-4'>
         <h1 className='h1-semibold'>Flash Sales</h1>
 
         <CountdownTimer />

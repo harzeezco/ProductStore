@@ -3,7 +3,17 @@ import NextImage from './next-image';
 import StarRatings from 'react-star-ratings';
 import { Star, Eye } from 'lucide-react';
 
-function ProductCard({images, title, rating, reviews, price, discountPercentage}) {
+
+interface ProductCardTypes {
+  images: string[];
+  title: string;
+  rating: number;
+  reviews: number;
+  price: number;
+  discountPercentage: number;
+}
+
+function ProductCard({images, title, rating, reviews, price, discountPercentage}: ProductCardTypes) {
   return (
     <div className='relative w-fit'>
       <NextImage

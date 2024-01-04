@@ -13,6 +13,7 @@ type ActiveType = {
 };
 
 const WrapperContext = createContext<ActiveType>({} as ActiveType);
+WrapperContext.displayName = 'WrapperContext';
 
 function Wrapper({ children }: { children: ReactNode }) {
   const [active, setActive] = useState('Home');
