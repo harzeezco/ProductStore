@@ -28,6 +28,10 @@ function useCountDown(countDownKey = 'flashSaleCountdown') {
     }
   }, [countDown, setCountDown]);
 
+  if (!countDown) {
+    throw new Error('Count down cannot be found');
+  }
+
   return { countDown };
 }
 

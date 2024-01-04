@@ -1,12 +1,12 @@
+'use client'
 import React from 'react';
 import NextImage from '@/client/components/elements/next-image';
 import { homeProducts } from '@/client/pages/home/lib/placeholders';
+import { useActive } from '@/client/pages/home/providers/hero-context.provider';
 
-function HomeProducts({
-  setActive,
-}: {
-  setActive: (active: string) => void;
-}) {
+function HomeProducts() {
+  const { setActive } = useActive();
+
   return (
     <section className='grid grid-rows-2 gap-3 overflow-hidden bg-gray-150 sm:grid-cols-2'>
       {homeProducts.map((product) => (

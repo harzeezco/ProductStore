@@ -3,6 +3,7 @@ import ReactQueryProvider from '@/client/providers/react-query.provider';
 import type { Metadata } from 'next';
 import { inter, poppins } from './font';
 import './styles/globals.css';
+import Header from '@/client/components/layouts/header';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,9 +16,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en' className='bg'>
+    <html lang='en'>
       <body className={`${poppins.className} ${inter.variable}`}>
-        <ReactQueryProvider>{children}</ReactQueryProvider>
+        <ReactQueryProvider>
+          <Header />
+          {children}
+        </ReactQueryProvider>
       </body>
     </html>
   );

@@ -1,12 +1,10 @@
-'use client';
-
-import React, { useState } from 'react';
+import React from 'react';
 import Container from '@/client/components/elements/container';
+import Wrapper from '../../providers/hero-context.provider';
 import Sidebar from './sidebar';
 import Main from './Main';
 
 function Hero() {
-  const [active, setActive] = useState('Home');
 
   return (
     <Container as='section' className='mb-20 grid place-items-center'>
@@ -17,11 +15,14 @@ function Hero() {
           transition: 'all 0.1s',
         }}
       >
-        <Sidebar setActive={setActive} active={active} />
-        <Main setActive={setActive} active={active} />
+        <Wrapper>
+          <Sidebar />
+          <Main />
+        </Wrapper>
       </div>
     </Container>
   );
+
 }
 
 export default Hero;

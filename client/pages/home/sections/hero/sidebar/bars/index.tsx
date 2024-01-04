@@ -1,18 +1,19 @@
+'use client'
+
 import { cn } from '@/client/lib/utils';
+import { useActive } from '../../../../providers/hero-context.provider';
 import Image from 'next/image';
 import React from 'react';
 
 function Bars({
   label,
   icon,
-  setActive,
-  active,
 }: {
   label: string;
   icon: string;
-  active: string;
-  setActive: (active: string) => void;
 }) {
+  const { active, setActive } = useActive();
+  
   return (
     <li>
       <button
@@ -32,9 +33,11 @@ function Bars({
           width={24}
           height={24}
         />
+
         <p className='grow justify-self-start text-gray-500 max-md:hidden'>
           {label}
         </p>
+
         <Image
           src={
             active === label

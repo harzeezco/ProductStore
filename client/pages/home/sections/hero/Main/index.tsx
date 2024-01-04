@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import ErrorFallback from '@/client/components/elements/ErrorFallback';
 import HomeProducts from './home';
@@ -5,6 +7,7 @@ import IPhoneProducts from './iphone';
 import MacBookProducts from './macbook';
 import WatchProducts from './watch';
 import IMacProducts from './imac';
+import { useActive } from '../../../providers/hero-context.provider';
 
 const components = [
   {
@@ -29,13 +32,9 @@ const components = [
   },
 ];
 
-function Main({
-  active,
-  setActive,
-}: {
-  active: string;
-  setActive: (active: string) => void;
-}) {
+function Main() {
+  const { active, setActive } = useActive();
+
   const filteredComponent = components.filter(
     (component) => component.name === active,
   );
@@ -44,7 +43,7 @@ function Main({
     <main>
       {filteredComponent.length ? (
         filteredComponent.map(({ Component, name }) => (
-          <Component key={name} setActive={setActive} />
+          <Component key={name} />
         ))
       ) : (
         <ErrorFallback onClick={() => setActive('Home')} />

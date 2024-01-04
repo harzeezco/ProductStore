@@ -3,13 +3,8 @@ import NextImage from '@/client/components/elements/next-image';
 import { SideLinks } from '../../../lib/placeholders';
 import Bars from './bars';
 
-function Sidebar({
-  active,
-  setActive,
-}: {
-  active: string;
-  setActive: (active: string) => void;
-}) {
+
+function Sidebar() {
   return (
     <aside className='sticky inset-y-0 left-0 grid h-[79.5vh] place-items-center bg-gray-100'>
       <NextImage
@@ -26,8 +21,6 @@ function Sidebar({
             <Bars
               key={bars.label}
               {...bars}
-              setActive={setActive}
-              active={active}
             />
           ))}
         </ul>

@@ -12,12 +12,12 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@/components/forms/form';
-import { Input } from '@/components/forms/input';
-import Button from '@/components/elements/button';
-import useLogin from '@/authentication/useLogin';
+} from '@/client/components/forms/form';
+import { Input } from '@/client/components/forms/input';
+import Button from '@/client/components/elements/button';
+import useLogin from '@/client/features/authentication/useLogin';
 import { useRouter } from 'next/navigation';
-import useUser from '@/authentication/useUser';
+import useUser from '@/client/features/authentication/useUser';
 
 const formSchema = z.object({
   email: z.string().min(2, {
