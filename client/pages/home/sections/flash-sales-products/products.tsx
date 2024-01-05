@@ -14,12 +14,10 @@ import useFlashSales from '../../api/useFlashSales';
 import { IProduct } from '../../types';
 
 function Products() {
-  const { isLoading, data } = useFlashSales();
-
+  const { data, isLoading } = useFlashSales();
+  
   if (isLoading) {
-    return (
-     <Loading />
-    );
+    return <Loading />;
   }
 
   if (

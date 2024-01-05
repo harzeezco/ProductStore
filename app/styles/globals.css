@@ -6,9 +6,9 @@
 }
 
 @layer utilities {
-  .container-max-w {
-    @apply max-w-[1185px] mx-auto px-6;
-  }
+   body {
+    overflow-x: hidden;
+   }
 
   .underline-link::before {
     content: '';
