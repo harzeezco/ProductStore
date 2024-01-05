@@ -6,36 +6,37 @@ import DeliveryImage from './delivery-image';
 
 function About() {
   return (
-    <Container as='section' className='section-divider lg:ml-16 relative gray delivery'>
-      <div className='container'>
-        <div className='delivery-content'>
-          <h2 className='h1-semibold max-w-[450px]'>
-            A Moments Of Delivered On{' '}
-            <span className='text-primary'>Right Time</span> & Place
-          </h2>
+    <Container
+      as='section'
+      className='section-divider lg:ml-16 relative gray grid md:grid-cols-2 items-center gap-[50px]'
+    >
+      <div>
+        <h2 className='h1-semibold max-w-[450px]'>
+          A Moments Of Delivered On{' '}
+          <span className='text-primary'>Right Time</span> & Place
+        </h2>
 
-          <p className='section-text'>
-            The restaurants in Hangzhou also catered to many northern
-            Chinese who had fled south from Kaifeng during the Jurchen
-            invasion of the 1120s, while it is also known that many
-            restaurants were run by families.
-          </p>
+        <p className='my-[15px]'>
+          The restaurants in Hangzhou also catered to many northern
+          Chinese who had fled south from Kaifeng during the Jurchen
+          invasion of the 1120s, while it is also known that many
+          restaurants were run by families.
+        </p>
 
-          <Button>Order Now</Button>
-        </div>
-
-        <figure className='delivery-banner'>
-          <NextImage
-            src='/png/home-assets/delivery-banner-bg.png'
-            width='700'
-            height='602'
-            alt='clouds'
-            className='w-100'
-          />
-
-         <DeliveryImage />
-        </figure>
+        <Button>Order Now</Button>
       </div>
+
+      <figure className='aspect-[1_/0.86] relative'>
+        <NextImage
+          src='/png/home-assets/delivery-banner-bg.png'
+          width='700'
+          height='602'
+          alt='clouds'
+          className='w-100'
+        />
+
+        <DeliveryImage />
+      </figure>
     </Container>
   );
 }

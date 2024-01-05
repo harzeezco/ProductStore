@@ -38,7 +38,7 @@ function DeliveryImage() {
   }, [deliveryBoyMove]);
 
   return (
-    <div ref={deliveryBoyRef} className='delivery-img'>
+    <div ref={deliveryBoyRef} className='delivery-img absolute top-0 left-0 translate-x-[-80px] transition-[0.5s_ease]'>
       <NextImage
         src='/svg/delivery-boy.svg'
         width='1000'

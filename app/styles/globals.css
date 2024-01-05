@@ -103,40 +103,4 @@
     background-repeat: repeat no-repeat;
     background-position: bottom;
   }
-  .delivery .section-title {
-    max-width: 17ch;
-    line-height: 1.6;
-    letter-spacing: -2px;
-  }
-
-  .delivery .section-text {
-    margin-block: 15px 25px;
-  }
-
-  .delivery-banner {
-    position: relative;
-    aspect-ratio: 1 / 0.86;
-  }
-
-  .delivery-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateX(-80px);
-    transition: 0.5s ease;
-  }
-
-  .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 50px;
-  }
-  /* .section-divider.white::after {
-    background-image: url('../images/shape-white.png');
-  }
-
-  .section-divider.gray::after {
-    background-image: url('../images/shape-grey.png');
-  } */
 }
