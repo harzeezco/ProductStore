@@ -11,10 +11,10 @@ function About() {
       className='section-divider lg:ml-16 relative gray grid md:grid-cols-2 items-center gap-[50px]'
     >
       <div>
-        <h2 className='h1-semibold max-w-[450px]'>
+        <h1 className='h1-semibold max-w-[450px]'>
           A Moments Of Delivered On{' '}
           <span className='text-primary'>Right Time</span> & Place
-        </h2>
+        </h1>
 
         <p className='my-[15px]'>
           The restaurants in Hangzhou also catered to many northern
