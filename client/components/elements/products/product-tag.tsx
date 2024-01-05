@@ -1,6 +1,6 @@
 import React from 'react';
 import { cn } from '@/client/lib/utils';
-import NextImage from './next-image';
+import NextImage from '../next-image';
 
 function ProductTag({
   discount,

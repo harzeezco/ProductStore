@@ -2,7 +2,7 @@ export function formatCountdownTime(value: number) {
   return value < 10 ? `0${value}` : value;
 }
 
-export function countDownData(countDown): Array<{
+export function countDownData(countDown: any): Array<{
   type: string;
   formatter: string;
   hasColon: boolean;
@@ -29,4 +29,27 @@ export function countDownData(countDown): Array<{
       hasColon: false,
     },
   ];
+}
+
+export function calculateDiscountPrice(
+  originalPrice: number,
+  discountPercentage: number,
+): number | null {
+  if (
+    originalPrice <= 0 ||
+    discountPercentage < 0 ||
+    discountPercentage > 100
+  ) {
+    // Handle invalid input values
+    console.error(
+      'Invalid input values for calculating discounted price.',
+    );
+    return null;
+  }
+
+  const discountAmount: number =
+    (originalPrice * discountPercentage) / 100;
+  const discountPrice: number = originalPrice - discountAmount;
+
+  return discountPrice;
 }

@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Button from '@/client/components/elements/button';
-import ProductTag from '@/client/components/elements/product-tag';
+import ProductTag from '@/client/components/elements/products/product-tag';
 import NextImage from '@/client/components/elements/next-image';
 
 import ColorPalette from '@/client/pages/home/components/elements/color-palette';

@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Button from '@/client/components/elements/button';
 import NextImage from '@/client/components/elements/next-image';
-import ProductTag from '@/client/components/elements/product-tag';
+import ProductTag from '@/client/components/elements/products/product-tag';
 
 type WatchIphoneCardProps = {
   img?: string;

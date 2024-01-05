@@ -8,6 +8,6 @@
   }
 
   .h3-medium {
-    @apply text-lg font-medium
+    @apply font-semibold font-inter text-black/80;
   }
 }
