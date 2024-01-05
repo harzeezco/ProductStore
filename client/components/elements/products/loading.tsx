@@ -2,9 +2,7 @@ import React from "react";
 import { Carousel, CarouselContent, CarouselNext, CarouselPrevious } from "../carousel";
 import { Skeleton } from "../skeleton";
 
-const productLength = 8;
-
-function Loading() {
+function Loading({productLength = 8 }: {productLength?: number}) {
   return (
     <Carousel
       opts={{

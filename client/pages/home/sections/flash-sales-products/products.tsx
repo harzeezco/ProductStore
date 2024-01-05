@@ -2,8 +2,6 @@
 
 import React from 'react';
 import ProductCard from '@/client/components/elements/products/product-card';
-import useFlashSales from '../../api/useFlashSales';
-import { IProduct } from '../../types';
 import {
   Carousel,
   CarouselContent,
@@ -12,6 +10,8 @@ import {
   CarouselPrevious,
 } from '@/client/components/elements/carousel';
 import Loading from '@/client/components/elements/products/loading';
+import useFlashSales from '../../api/useFlashSales';
+import { IProduct } from '../../types';
 
 function Products() {
   const { isLoading, data } = useFlashSales();

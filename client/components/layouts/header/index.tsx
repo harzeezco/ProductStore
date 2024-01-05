@@ -24,7 +24,7 @@ function Header() {
   return (
     <Container
       as='header'
-      className='flex items-center justify-between py-6'
+      className='flex items-center justify-between py-6 mb-0'
     >
 
       <div className='flex items-center  gap-10'>

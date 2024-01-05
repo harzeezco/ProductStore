@@ -7,7 +7,7 @@ import Main from './Main';
 function Hero() {
 
   return (
-    <Container as='section' className='mb-20 grid place-items-center'>
+    <Container as='section' className='grid place-items-center'>
       <div
         className='custom-scrollbar relative grid h-[80vh] min-h-[70vh] w-[85vw] min-w-[80vw] max-w-[90vw] resize-x grid-cols-[auto_1fr] overflow-auto rounded-[2rem]'
         style={{

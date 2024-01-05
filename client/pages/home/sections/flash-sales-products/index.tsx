@@ -13,7 +13,7 @@ function FlashSalesProducts() {
       <div className='flex max-sm:flex-col md:items-center gap-x-14 gap-y-4'>
         <h1 className='h1-semibold'>Flash Sales</h1>
 
-        {/* <CountdownTimer /> */}
+        <CountdownTimer />
       </div>
       </div>
 

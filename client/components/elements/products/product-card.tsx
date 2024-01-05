@@ -2,8 +2,9 @@ import React from 'react';
 import NextImage from '../next-image';
 import StarRatings from 'react-star-ratings';
 import { Star, Eye } from 'lucide-react';
-import Button from '../button';
+
 import { calculateDiscountPrice } from '@/client/pages/home/lib/utils';
+import Button from '../button';
 
 interface ProductCardTypes {
   images: string[];
@@ -48,7 +49,7 @@ function ProductCard({
       </div>
 
       <div className='mt-2'>
-        <h2 className='h3-medium line-clamp-1' title={title}>
+        <h2 className='h3-semibold line-clamp-1' title={title}>
           {title}
         </h2>
 

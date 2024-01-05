@@ -4,7 +4,7 @@ import { cn } from '@/client/lib/utils';
 const Variants = {
   primary: 'bg-primary text-white',
   transparent: 'bg-transparent text-black',
-  black: 'bg-black text-white hover:bg-black/90 transition',
+  black: 'bg-black text-white hover:bg-primary transition',
   success: 'bg-green-600 gray-50',
 };
 
