@@ -1,11 +1,10 @@
 import React from 'react';
 import Container from '@/client/components/elements/container';
 import Wrapper from '../../providers/hero-context.provider';
-import Sidebar from './sidebar';
-import Main from './Main';
+import { Sidebar } from './sidebar';
+import{ Main }from './Main';
 
-function Hero() {
-
+export function Hero() {
   return (
     <Container as='section' className='grid place-items-center'>
       <div
@@ -22,7 +21,4 @@ function Hero() {
       </div>
     </Container>
   );
-
 }
-
-export default Hero;

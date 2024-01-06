@@ -1,19 +1,13 @@
-'use client'
+'use client';
 
 import { cn } from '@/client/lib/utils';
-import { useActive } from '../../../../providers/hero-context.provider';
+import { useActive } from '../../../providers/hero-context.provider';
 import Image from 'next/image';
 import React from 'react';
 
-function Bars({
-  label,
-  icon,
-}: {
-  label: string;
-  icon: string;
-}) {
+function Bars({ label, icon }: { label: string; icon: string }) {
   const { active, setActive } = useActive();
-  
+
   return (
     <li>
       <button

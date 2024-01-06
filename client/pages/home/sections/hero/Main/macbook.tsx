@@ -1,5 +1,3 @@
-'use client';
-
 import React, { useState } from 'react';
 import Button from '@/client/components/elements/button';
 import ProductTag from '@/client/components/elements/products/product-tag';
@@ -7,8 +5,39 @@ import NextImage from '@/client/components/elements/next-image';
 
 import ColorPalette from '@/client/pages/home/components/elements/color-palette';
 import { MacBookProduct } from '@/client/pages/home/lib/placeholders';
+import { cn } from '@/client/lib/utils';
 
-import MacbookTab from './macbook-tab';
+type MacbookTabProps = {
+  id: number;
+  radius: string;
+  active: number;
+  onClick: (id: number) => void;
+  type: string;
+};
+
+function MacbookTab({
+  id,
+  radius,
+  active,
+  onClick,
+  type,
+}: MacbookTabProps) {
+  return (
+    <div
+      key={id}
+      className={cn(
+        `cursor-pointer border-[1.5px] border-solid px-5 py-3 transition-all hover:bg-slate-300 ${radius}`,
+        active === id ? 'bg-slate-300' : '',
+      )}
+      onClick={() => onClick(id)}
+      onKeyDown={() => onClick(id)}
+      role='button'
+      tabIndex={-1}
+    >
+      <span className='font-medium'>{type}</span>
+    </div>
+  );
+}
 
 const tabs = [
   {

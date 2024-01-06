@@ -4,7 +4,7 @@ import NextImage from '@/client/components/elements/next-image';
 import React from 'react';
 import DeliveryImage from './delivery-image';
 
-function About() {
+export function About() {
   return (
     <Container
       as='section'
@@ -41,4 +41,3 @@ function About() {
   );
 }
 
-export default About;

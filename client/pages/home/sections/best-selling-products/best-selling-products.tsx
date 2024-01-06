@@ -4,7 +4,7 @@ import React from 'react';
 import Products from './products';
 import Button from '@/client/components/elements/button';
 
-function BestSellingProducts() {
+export function BestSellingProducts() {
   return (
     <Container as='section' className=''>
       <div className='lg:mx-14'>
@@ -21,5 +21,3 @@ function BestSellingProducts() {
     </Container>
   );
 }
-
-export default BestSellingProducts;

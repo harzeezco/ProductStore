@@ -1,8 +1,9 @@
 import React from 'react';
-import Hero from '@/client/pages/home/sections/hero';
-import FlashSalesProducts from '@/client/pages/home/sections/flash-sales-products';
-import About from '@/client/pages/home/sections/about';
-import BestSellingProducts from '@/client/pages/home/sections/best-selling-products';
+import { Hero } from '@/client/pages/home/sections';
+import { FlashSalesProducts } from '@/client/pages/home/sections';
+import { About } from '@/client/pages/home/sections';
+import { BestSellingProducts } from '@/client/pages/home/sections';
+import { Category } from '@/client/pages/home/sections';
 
 function Home() {
   return (
@@ -11,6 +12,7 @@ function Home() {
       <FlashSalesProducts />
       <About />
       <BestSellingProducts />
+      <Category />
     </main>
   );
 }

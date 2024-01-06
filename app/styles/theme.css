@@ -8,7 +8,7 @@
   }
 
   .h2 {
-    @apply text-4xl font-inter font-semibold text-black/80 max-w-md;
+    @apply text-5xl font-inter font-semibold max-w-md;
   }
 
   .h3-semibold {
