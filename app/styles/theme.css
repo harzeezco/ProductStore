@@ -8,7 +8,7 @@
   }
 
   .h2 {
-    @apply text-5xl font-inter font-semibold max-w-md;
+    @apply text-5xl lg:leading-[50px] font-inter font-semibold max-w-md;
   }
 
   .h3-semibold {

@@ -55,12 +55,6 @@ function Header() {
 
         <div className='flex items-center gap-5'>
           <NextImage
-            src='/svg/favorite-icon.svg'
-            alt='favorite'
-            width={30}
-            height={30}
-          />
-          <NextImage
             src='/svg/cart-icon.svg'
             alt='cart'
             width={34}

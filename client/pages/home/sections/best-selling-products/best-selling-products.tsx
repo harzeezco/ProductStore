@@ -6,7 +6,7 @@ import Button from '@/client/components/elements/button';
 
 export function BestSellingProducts() {
   return (
-    <Container as='section' className=''>
+    <Container as='section'>
       <div className='lg:mx-14'>
         <FeaturedTitle title='This Month' />
 

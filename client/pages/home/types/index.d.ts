@@ -5,8 +5,8 @@ export interface IProduct {
   stock: number;
   title: string;
   images: string[];
-  rating: number;
-  reviews: number;
+  rating?: number;
+  reviews?: number;
   category: string;
   thumbnail: string;
   description: string;

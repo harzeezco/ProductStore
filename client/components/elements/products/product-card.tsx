@@ -9,8 +9,8 @@ import Button from '../button';
 interface ProductCardTypes {
   images: string[];
   title: string;
-  rating: number;
-  reviews: number;
+  rating?: number;
+  reviews?: number;
   price: number;
   discountPercentage: number;
 }
@@ -75,7 +75,7 @@ function ProductCard({
             starDimension='20px'
             starSpacing='2px'
           />
-          <span>{`(${reviews})`}</span>
+          {reviews && <span>{`(${reviews})`}</span>}
         </div>
 
         <Button variant='black' size='full' className='mt-3'>

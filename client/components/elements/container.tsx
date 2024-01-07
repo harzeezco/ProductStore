@@ -4,7 +4,7 @@ import { cn } from '@/client/lib/utils';
 interface Props<C extends React.ElementType> {
   as?: C;
   children: React.ReactNode;
-  className: string;
+  className?: string;
 }
 
 type ContainerTypes<C extends React.ElementType> = Props<C> &
@@ -23,7 +23,7 @@ function Container<C extends React.ElementType = 'div'>({
   return (
     <Component
       {...otherProps}
-      className={cn('max-w-[1185px] mx-auto px-6 mb-24', className)}
+      className={cn('max-w-[1145px] mx-auto px-6 mb-24', className)}
     >
       {children}
     </Component>

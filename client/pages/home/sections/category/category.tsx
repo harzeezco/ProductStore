@@ -6,7 +6,7 @@ import NextImage from '@/client/components/elements/next-image';
 
 export function Category() {
   return (
-    <Container as='section' className='text-white'>
+    <Container as='section' className='text-white !max-w-[1200px]'>
       <div className='bg-black flex flex-col md:flex-row justify-around items-center py-16'>
         <div>
           <span className='text-primary text-sm'>Category</span>
