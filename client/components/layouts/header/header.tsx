@@ -16,7 +16,7 @@ import User from '../../elements/user';
 import Hamburger from '../../elements/hamburger';
 import Nav from './nav';
 
-function Header() {
+export function Header() {
   const { isAuthenticated } = useUser();
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
@@ -81,4 +81,3 @@ function Header() {
   );
 }
 
-export default Header;

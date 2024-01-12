@@ -3,7 +3,8 @@ import ReactQueryProvider from '@/client/providers/react-query.provider';
 import type { Metadata } from 'next';
 import { inter, poppins } from './font';
 import './styles/globals.css';
-import Header from '@/client/components/layouts/header';
+import { Header } from '@/client/components/layouts/header';
+import { Footer } from '@/client/components/layouts/footer';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -21,6 +22,7 @@ export default function RootLayout({
         <ReactQueryProvider>
           <Header />
           {children}
+          <Footer />
         </ReactQueryProvider>
       </body>
     </html>

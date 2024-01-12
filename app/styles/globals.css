@@ -6,9 +6,9 @@
 }
 
 @layer utilities {
-   body {
+  body {
     overflow-x: hidden;
-   }
+  }
 
   .underline-link::before {
     content: '';
@@ -112,6 +112,50 @@
     width: 500px;
     height: 400px;
     border-radius: 100%;
-    opacity: .5;
+    opacity: 0.5;
   }
+
+  .footer {
+    overflow: hidden;
+  }
+
+  .footer-top {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    border-block-end: 2px solid hsla(245, 17%, 29%, 0.3);
+  }
+
+  .footer-top::after {
+    content: url('/svg/delivery-boy.svg');
+    position: absolute;
+    bottom: -11px;
+    left: -160px;
+    width: 160px;
+    animation: running-cycle 20s linear infinite;
+  }
+
+  @keyframes running-cycle {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+
+  .footer-top .container {
+    display: grid;
+    gap: 30px;
+  }
+
+  .footer-bottom {
+  padding-block: 20px;
+  text-align: center;
+}
+
+.copyright-link { display: inline-block; }
+
+.copyright-link:is(:hover, :focus) { text-decoration: underline; }
 }

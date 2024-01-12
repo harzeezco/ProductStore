@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import ProductCard from '@/client/components/elements/products/product-card';
 import {
   Carousel,
@@ -10,26 +10,30 @@ import {
   CarouselPrevious,
 } from '@/client/components/elements/carousel';
 import Loading from '@/client/components/elements/products/loading';
-import useFlashSales from '../../api/useFlashSales';
 import { IProduct } from '../../types';
-import useBestSelling from '../../api/useBestSelling';
+import { useAsync } from '@/client/hooks/useAsync';
+import { client } from '@/client/lib/utils';
 
 function Products() {
-  const { isLoading, data } = useBestSelling();
+  const { isLoading, data, run } = useAsync();
+
+  useEffect(() => {
+    run(client('http://localhost:3000/products/best-selling'));
+  }, [run]);
 
   if (isLoading) {
     return <Loading />;
   }
 
-  if (
-    !Array.isArray(data) ||
-    data.length === 0 ||
-    !Array.isArray(data[0]?.items)
-  ) {
-    throw new Error('Invalid data format');
-  }
+  // if (
+  //   !Array.isArray(data) ||
+  //   data.length === 0 ||
+  //   !Array.isArray(data)
+  // ) {
+  //   throw new Error('Invalid data format');
+  // }
 
-  const items = data[0].items;
+  // const items = data[0].items;
 
   return (
     <Carousel
@@ -39,7 +43,7 @@ function Products() {
       className='w-[80%] md:w-[90%] mx-auto mt-10'
     >
       <CarouselContent>
-        {items.map((product: IProduct) => (
+        {data?.map((product: IProduct) => (
           <CarouselItem
             key={product.id}
             className='basis-3/4 md:basis-1/2 lg:basis-1/4'

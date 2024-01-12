@@ -11,7 +11,15 @@
     @apply text-5xl lg:leading-[50px] font-inter font-semibold max-w-md;
   }
 
+  .h3-bold {
+    @apply font-bold font-inter text-2xl;
+  }
+
   .h3-semibold {
     @apply font-semibold font-inter text-black/80;
+  }
+
+  .h3-medium {
+    @apply font-medium font-inter text-black/80 text-xl;
   }
 }
