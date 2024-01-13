@@ -1,6 +1,6 @@
+import React from 'react';
 import Container from '@/client/components/elements/container';
 import FeaturedTitle from '@/client/components/elements/featured-title';
-import React from 'react';
 import Products from './products';
 import Button from '@/client/components/elements/button';
 

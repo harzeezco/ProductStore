@@ -18,7 +18,7 @@ function Products() {
    const { isLoading, data, run } = useAsync();
 
   useEffect(() => {
-    run(client('http://localhost:3000/products/flash-sales'));
+    run(client('http://localhost:3000/api/flash-sales'));
   }, [run]);
   
   if (isLoading) {

@@ -18,22 +18,12 @@ function Products() {
   const { isLoading, data, run } = useAsync();
 
   useEffect(() => {
-    run(client('http://localhost:3000/products/best-selling'));
+    run(client('http://localhost:3000/api/best-selling'));
   }, [run]);
 
   if (isLoading) {
     return <Loading />;
   }
-
-  // if (
-  //   !Array.isArray(data) ||
-  //   data.length === 0 ||
-  //   !Array.isArray(data)
-  // ) {
-  //   throw new Error('Invalid data format');
-  // }
-
-  // const items = data[0].items;
 
   return (
     <Carousel
