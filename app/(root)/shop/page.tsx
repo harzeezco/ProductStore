@@ -1,11 +1,8 @@
-import React from 'react'
+import { ShopProducts } from '@/client/pages/shop';
+import React from 'react';
 
 function Shop() {
-  return (
-    <div>
-      
-    </div>
-  )
+  return <ShopProducts />;
 }
 
 export default Shop;
